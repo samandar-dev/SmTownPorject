@@ -1,0 +1,13 @@
+.lang {
+    width: auto;
+    &__select {
+        width: auto;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        background: #b0b7c1;
+    }
+}

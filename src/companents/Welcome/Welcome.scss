@@ -1,0 +1,101 @@
+@import "../../App.scss";
+
+.welcome {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: $primary-color-1;
+    &__logo-box {
+        position: absolute;
+        top: 65px;
+        right: 84px;
+        img {
+            width: auto;
+            object-fit: cover;
+            transition: all 0.2s ease;
+        }
+    }
+    &__title-box {
+        width: 100%;
+        height: 100%;
+        @include flex-jc-center
+    }
+    &__title {
+        color: $white;
+        font-size: 80px;
+        font-weight: 400;
+        line-height: 94px;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+    }
+    span{
+        color: $primary-color-1;
+    }
+}
+
+// MEDIA PART =========================
+
+@media screen and (max-width: 1100px) {
+    .welcome {
+        &__logo-box {
+            top: 45px;
+            right: 64px;
+            img {
+                width: 100px;
+                height: 95px;
+            }
+        }
+        &__title {
+            font-size: 60px;
+            line-height: 54px;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .welcome {
+        &__logo-box {
+            top: 35px;
+            right: 54px;
+            img {
+                width: 80px;
+                height: 75px;
+            }
+        }
+        &__title {
+            font-size: 45px;
+            line-height: 50px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .welcome {
+        &__logo-box {
+            top: 25px;
+            right: 44px;
+            img {
+                width: 60px;
+                height: 55px;
+            }
+        }
+        &__title {
+            font-size: 28px;
+            line-height: 45px;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .welcome {
+        &__logo-box {
+            top: 25px;
+            right: 24px;
+            img {
+                width: 50px;
+                height: 45px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+            line-height: 35px;
+        }
+    }
+}

@@ -1,0 +1,232 @@
+@import "../../App.scss";
+
+.footer {
+  width: 100%;
+  height: auto;
+  padding: 50px 0;
+  position: relative;
+  background: $primary-color-13;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    @include flex;
+  }
+  &__top-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    @include flex-jc-center;
+    border-radius: $db-radius-2;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(221, 224, 231, 0.2);
+  }
+  &__logo-desc {
+    width: 100%;
+    @include flex-jc-between;
+  }
+  &__logo {
+    margin-right: 95px;
+    img {
+      width: 85px;
+      height: 80px;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    width: 100%;
+    @include flex-jc-between;
+    align-items: end;
+  }
+  &__desc {
+    width: auto;
+    height: auto;
+  }
+  &__desc-list {
+    @include flex;
+    flex-wrap: wrap;
+  }
+  &__desc-list-one {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 17px;
+    :nth-child(2),
+    :nth-child(3) {
+      a {
+        p {
+          border-left: 0.5px solid #cecece;
+          border-right: 0.5px solid #cecece;
+        }
+      }
+    }
+    :nth-child(2) {
+      margin-right: 0;
+    }
+    :nth-child(3) {
+      margin-left: 0;
+      a {
+        p {
+          border-left: none;
+        }
+      }
+    }
+  }
+  &__desc-list-two {
+    width: 100%;
+    max-width: 410px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 12px;
+    :nth-child(1) {
+      a {
+        p {
+          border-right: 0.5px solid #cecece;
+        }
+      }
+    }
+    :nth-child(2) {
+      margin-right: 40px;
+    }
+    :nth-child(4) {
+      a {
+        p {
+          border-left: 0.5px solid #cecece;
+          border-right: 0.5px solid #cecece;
+        }
+      }
+    }
+  }
+  &__desc-item-top {
+    a {
+      p {
+        opacity: 0.5;
+        color: $white;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 12px;
+        font-family: "Noto Sans KR" !important;
+        padding: 0 10px;
+      }
+    }
+  }
+  &__desc-item {
+    a {
+      p {
+        opacity: 0.4;
+        color: $white;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 10px;
+        font-family: "Noto Sans KR";
+        padding: 0 10px;
+      }
+    }
+  }
+  &__desc-info {
+    opacity: 0.3;
+    color: $white;
+    font-size: 9px;
+    font-weight: 300;
+    line-height: 11px;
+  }
+  &__networks {
+    @include flex;
+    align-items: end;
+    justify-content: end;
+  }
+  &__networks-list {
+    @include flex;
+    padding-right: 30px;
+    margin-left: -13px;
+    margin-right: -13px;
+  }
+  &__networks-item {
+    margin: 0 13px;
+    a {
+      color: $primary-color-7;
+    }
+  }
+  &__nwtworks-select {
+    width: auto;
+    height: auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: $primary-color-13;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: "Noto Sans KR";
+    color: rgba(255, 255, 255, 0.5);
+
+    padding: 7px 5px;
+    padding-right: 30px;
+  }
+}
+
+// MEDIA PART
+
+@media screen and (max-width: 900px) {
+  .footer {
+    &__logo {
+      margin-right: 55px;
+    }
+    &__desc-list-two {
+      :nth-child(2) {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 62px;
+    &__logo-desc {
+      flex-direction: column !important;
+      align-items: start;
+    }
+    &__info {
+      flex-direction: column-reverse !important;
+      align-items: start;
+    }
+    &__desc-list-two {
+      :nth-child(2) {
+        margin-right: 40px;
+      }
+    }
+    &__desc-item-top {
+      a {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+    &__logo {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__networks{
+      margin-bottom: 60px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 62px;
+    &__desc-list-two {
+      :nth-child(2) {
+        margin-right: 0px;
+      }
+    }
+    &__networks{
+      flex-wrap: wrap;
+      justify-content: start;
+    }
+  }
+}

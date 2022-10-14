@@ -1,0 +1,36 @@
+@import "../../App.scss";
+
+.searchLoginLang {
+    width: 100%;
+    padding-top: 12px;
+    margin-bottom: 23px;
+    @include flex;
+    justify-content: end;
+    &__list {
+        @include flex;
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    &__item {
+        margin: 0 16px;
+        line-height: 23px;
+    }
+    button {
+        color: $white;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        transition: all 0.2s ease;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+// MEDIA PART
+
+@media screen and (max-width: 870px) {
+    .searchLoginLang {
+        display: none;
+    }
+}

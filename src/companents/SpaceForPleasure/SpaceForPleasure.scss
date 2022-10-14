@@ -1,0 +1,188 @@
+@import "../../App.scss";
+
+.space {
+    position: relative;
+    width: 100%;
+    padding-bottom: 209px;
+    overflow: hidden;
+    &__name-big {
+        @include big-name-stiyle;
+        @include flex-jc-center;
+        text-align: center;
+    }
+    &__inner {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1340px;
+        margin-bottom: 20px;
+    }
+    &__top-list{
+        width: 100%;
+        padding: 0 40px;
+    }
+    &__top-list {
+        @include flex-jc-between;
+        margin-bottom: 86px;
+        overflow: hidden;
+    }
+    &__top-item {
+        @include flex-jc-center;
+        border-radius: $db-radius-2;
+    }
+    &__top-title {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        white-space: nowrap;
+        color: $primary-color-7;
+        padding: 30px 20px 30px 20px;
+    }
+    &__desc-img-box {
+        width: 100%;
+        @include flex;
+    }
+    &__desc {
+        text-align: center;
+    }
+    &__desc-title {
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        color: $primary-color-1;
+    }
+    &__desc-link {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: -0.02em;
+        color: $primary-color-11;
+        margin-bottom: 8px;
+    }
+    &__desc-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: -0.02em;
+        color: $primary-color-12;
+        margin-bottom: 40px;
+        padding: 0 120px;
+    }
+    &__desc-logo-box {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 390px;
+    }
+    &__desc-logo-list {
+        @include flex-jc-between;
+        flex-wrap: wrap;
+    }
+    &__img {
+        width: 100%;
+        height: 406px;
+        max-width: 674px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+.spaceItemAct {
+    background: $primary-color-8;
+    p {
+        font-weight: 700;
+        color: $primary-color-1;
+    }
+}
+
+// MEDIA PART
+
+@media screen and (max-width: 1200px) {
+    .space {
+        &__name-big {
+            font-size: 90px;
+            line-height: 108px;
+        }
+        &__desc-img-box {
+            flex-direction: column !important;
+        }
+        &__desc {
+            width: 70%;
+        }
+        &__desc-text {
+            padding: 0 40px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .space {
+        padding-bottom: 228px;
+        &__desc-text {
+            padding: 0;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .space {
+        padding-bottom: 200px;
+        &__inner {
+            max-width: auto;
+            margin-bottom: 16px;
+        }
+        &__name-big {
+            font-size: 70px;
+            line-height: 75px;
+        }
+        &__top-list-box{
+            padding: 0 25px;
+        }
+        &__desc-logo-list {
+            flex-wrap: nowrap;
+        }
+        &__desc-logo-box {
+            max-width: 400px;
+        }
+        &__img {
+            height: 306px;
+            max-width: auto;
+        }
+    }
+}
+@media screen and (max-width: 345px) {
+    .space {
+        padding-bottom: 158px;
+        &__top-title {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            padding: 30px 20px 30px 20px;
+        }
+        &__name-big {
+            font-size: 50px;
+            line-height: 50px;
+        }
+        &__desc-title {
+            font-size: 22px;
+            line-height: 40px;
+        }
+        &__desc-link {
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        &__desc-text {
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 35px;
+            padding: 0;
+        }
+        &__top-list-box{
+            padding: 0;
+        }
+        &__img {
+            height: 204px;
+            max-width: auto;
+        }
+    }
+}

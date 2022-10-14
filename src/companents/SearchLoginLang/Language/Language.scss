@@ -1,0 +1,15 @@
+@import "../../../App.scss";
+
+.lang {
+    &__select {
+        width: auto;
+        border: none;
+        outline: none;
+        color: $white;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        background: $primary-color-7;
+    }
+}
