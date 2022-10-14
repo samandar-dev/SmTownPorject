@@ -21,8 +21,9 @@ export default function HeroSlider() {
     ]
 
     const settings = {
-        infinite: true,
+        // dots: true,
         speed: 300,
+        infinite: true,
         initialSlide: 1,
     };
 
@@ -42,14 +43,15 @@ export default function HeroSlider() {
     }
 
     useEffect(() => {
-        sliderActiveHandler()
+        // sliderActiveHandler()
+        console.log(sliderRef);
     }, [sliderCount]);
 
     return (
         <div className='heroSlider'>
             <Slider className="heroSlider__slider" ref={sliderRef} {...settings}>
                 {heroSliderItems.map(item => (
-                    <div className='heroSlider__item' id={item.id} key={item.id}>
+                    <li className='heroSlider__item' id={item.id} key={item.id} >
                         {item.id === 2 ?
                             <>
                                 <img className='heroSlider__item-img-one' src={item.img[0]} alt="hero item" />
@@ -57,7 +59,7 @@ export default function HeroSlider() {
                             </>
                             : <img src={item.img} alt="hero item" />
                         }
-                    </div>
+                    </li>
                 ))}
             </Slider>
 

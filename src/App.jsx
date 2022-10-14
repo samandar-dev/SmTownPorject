@@ -1,4 +1,4 @@
-import Home from './companents/SmChangwon/SmChangwon';
+import Home from './companents/Home/Home';
 import Welcome from './companents/Welcome/Welcome';
 import HeroSlider from './companents/HeroSlider/HeroSlider';
 import SearchLoginLan from './companents/SearchLoginLang/SearchLoginLang';

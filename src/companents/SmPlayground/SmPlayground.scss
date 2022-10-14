@@ -140,9 +140,6 @@
             font-size: 80px;
             line-height: 80px !important;
         }
-        &__slider {
-            display: block;
-        }
         &__slider-list {
             :nth-child(1),
             :nth-child(5),
@@ -228,6 +225,9 @@
         }
         &__slider-list {
             display: none;
+        }
+        &__slider {
+            display: block;
         }
         .slick-slider {
             width: 100%;

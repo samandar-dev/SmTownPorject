@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Slider from 'react-slick'
 import spaceImg from "../../assets/images/space-img.png"
 import spaceLogo_1 from "../../assets/images/space-logo-1.png"
 import spaceLogo_2 from "../../assets/images/space-logo-2.png"
@@ -12,8 +13,16 @@ import spaceLogo_8 from "../../assets/images/space-logo-8.png"
 import "./SpaceForPleasure.scss"
 
 export default function SpaceForPleasure() {
+    const settings = {
+        speed: 300,
+    }
+
+    
+
     return (
         <div className='space'>
+            <p className="space__name-big">SPACE FOR PLEASURE</p>
+
             <div className="space__inner">
                 <div className="space__top-list-box">
                     <ul className="space__top-list">
@@ -55,7 +64,6 @@ export default function SpaceForPleasure() {
                     </ul>
                 </div>
 
-
                 <div className="space__desc-img-box">
                     <div className="space__desc">
                         <h3 className="space__desc-title">프리미엄 외식공간</h3>
@@ -80,9 +88,6 @@ export default function SpaceForPleasure() {
                                 <li className="space__desc-logo-item">
                                     <img src={spaceLogo_4} alt="" />
                                 </li>
-                                {/* </ul> */}
-
-                                {/* <ul className="space__desc-logo-list"> */}
                                 <li className="space__desc-logo-item">
                                     <img src={spaceLogo_5} alt="" />
                                 </li>
@@ -96,6 +101,10 @@ export default function SpaceForPleasure() {
                                     <img src={spaceLogo_7} alt="" />
                                 </li>
                             </ul>
+
+                            <Slider {...settings}>
+
+                            </Slider>
                         </div>
                     </div>
 
@@ -104,7 +113,6 @@ export default function SpaceForPleasure() {
                     </div>
                 </div>
             </div>
-            <p className="space__name-big">SPACE FOR PLEASURE</p>
         </div>
     )
 }

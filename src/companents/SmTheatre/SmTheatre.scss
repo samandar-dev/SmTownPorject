@@ -310,12 +310,8 @@
             height: 570px;
             transform: translate(-35%) !important;
             overflow: visible !important;
-            :nth-child(2),
-            :nth-child(4) {
+            :nth-child(even){
                 transform: translate(0, 120px);
-            }
-            :nth-child(3) {
-                transform: translate(0, 0);
             }
         }
         &__slider-item {

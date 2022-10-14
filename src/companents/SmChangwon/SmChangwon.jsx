@@ -11,8 +11,9 @@ import "./SmChangwon.scss"
 
 export default function SmChangwon() {
     return (
-        <div className='smChangwon'>
-            <div className="smChangwon__hero-bg-color"></div>
+        // <div className='smChangwon'>
+
+            {/* <div className="smChangwon__hero-bg-color"></div>
 
             <div className="smChangwon__header">
                 <Navbar />
@@ -44,8 +45,8 @@ export default function SmChangwon() {
 
             <div className="smChangown__footer">
                 <Footer />
-            </div>
-        </div>
+            </div> */}
+        // </div>
     )
 }
     

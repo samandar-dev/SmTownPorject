@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from "../../assets/images/Logo.svg"
-import SearchLoginLan from '../SearchLoginLan/SearchLoginLan'
+import SearchLoginLang from '../SearchLoginLang/SearchLoginLang'
 import "./Sidebar.scss"
 
 export default function Sidebar() {
@@ -10,7 +10,8 @@ export default function Sidebar() {
     return (
         <div className='sidebar'>
             <div className="container">
-                <SearchLoginLan />
+                <SearchLoginLang />
+
                 <div className="sidebar__inner d-flex align-items-center">
                     <ul className="sidebar__list d-flex align-items-center">
                         {sidebarItems.map((item, inx) => inx + 1 <= 3 ?

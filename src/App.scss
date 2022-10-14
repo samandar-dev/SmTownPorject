@@ -16,6 +16,9 @@
   box-sizing: border-box;
   font-family: "SMTOWN(OTF)";
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
   overflow-x: hidden;

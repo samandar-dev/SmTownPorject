@@ -11,7 +11,7 @@ export default function Footer() {
         <div className='footer'>
             <div className="container">
                 <div className="footer__inner">
-                    <button className="footer__top-btn">
+                    <button className="footer__top-btn" onClick={() => window.scrollTo(0, 0)}>
                         <BsArrowUp />
                     </button>
 
