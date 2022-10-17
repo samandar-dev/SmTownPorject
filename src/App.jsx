@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import Home from './companents/Home/Home';
 import Welcome from './companents/Welcome/Welcome';
 import './App.scss';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const [welcomeActive, setWelcomeActive] = useState(false)
+  const {t} = useTranslation()
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,7 +17,7 @@ function App() {
   return (
     <>
       <div className="app">
-        {welcomeActive ? <Home /> : <Welcome title={"SMTOWN 창원 홈페이지 메인"} />}
+        {welcomeActive ? <Home /> : <Welcome title={t("welcome-title")} />}
       </div>
     </>
   );

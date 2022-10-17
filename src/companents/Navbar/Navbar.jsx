@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import Logo from "../../assets/images/Logo.svg"
-import SearchLoginLan from '../SearchLoginLang/SearchLoginLang'
-import "./Navbar.scss"
-
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import Logo from "../../assets/images/Logo.svg"
 import { AiOutlineMenu } from 'react-icons/ai';
+import SearchLoginLang from '../SearchLoginLang/SearchLoginLang'
+import "./Navbar.scss"
 
 export default function Navbar() {
     const [age, setAge] = useState("STORE & INFO");
@@ -17,7 +13,7 @@ export default function Navbar() {
     return (
         <div className='navbar'>
             <div className="container">
-                <SearchLoginLan />
+                <SearchLoginLang />
 
                 <div className="navbar__inner">
                     <Select

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import smTheatreImg_1 from "../../assets/images/smTheatre-img-1.png"
@@ -23,6 +24,8 @@ export default function SmTownTheatre() {
     initialSlide: 0,
   };
 
+  const { t } = useTranslation()
+
   return (
     <div className='smTheatre'>
       <div className="smTheatre__inner">
@@ -30,7 +33,7 @@ export default function SmTownTheatre() {
         <p className='smTheatre__name-big'>THEATRE</p>
 
         <div className="container">
-          <h3 className="smTheatre__title">SMTOWN창원만의 유니크한 공간과 <br /> 다양한 전문시스템을 가진 단 하나의 공연장</h3>
+          <h3 className="smTheatre__title">{t("title")}</h3>
 
           <div className="smTheatre__slider-box">
             <ul className="smTheatre__slider-list">

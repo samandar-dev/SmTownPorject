@@ -23,7 +23,7 @@ export default function SmStayItems({ setViewModalAct, setViewItem, item }) {
                   <div className="smStay__item-desc">
                     <ul className="smStay__item-desc-list">
                       {item.info.map(slidDesc => (
-                        <li className="smStay__item-desc-item">
+                        <li className="smStay__item-desc-item" key={slidDesc.infoID}>
                           <h4 className={`smStay__item-desc-title ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}>{infoItem.infoTitle}</h4>
 
                           <div className={`smStay__item-desc-line ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}>

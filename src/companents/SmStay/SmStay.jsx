@@ -56,7 +56,7 @@ export default function SmStay() {
                             <div className="smStay__btns-box">
                                 <ul className="smStay__btns-list">
                                     {stayItems.map(item => (
-                                        <li className="smStay__btns-item">
+                                        <li className="smStay__btns-item" key={item.id}>
                                             <button className={`smStay__btn ${item.id === stayItemActive ? "smbtnAct" : ""}`}
                                                 onClick={() => setStayItemActive(item.id)}>
                                                 {item.title}
@@ -69,9 +69,9 @@ export default function SmStay() {
                             <ul className="smStay__list">
                                 {stayItems.map(item => (
                                     item.id === stayItemActive ?
-                                        <SmStayItems item={item} setViewItem={setViewItem} setViewModalAct={setViewModalAct} /> :
+                                        <SmStayItems item={item} setViewItem={setViewItem} setViewModalAct={setViewModalAct} key={item.id} /> :
                                         item.id === 3 ?
-                                            <SmStayItems item={item} setViewItem={setViewItem} setViewModalAct={setViewModalAct} />
+                                            <SmStayItems item={item} setViewItem={setViewItem} setViewModalAct={setViewModalAct} key={item.id} />
                                             : ""
                                 ))}
                             </ul>
