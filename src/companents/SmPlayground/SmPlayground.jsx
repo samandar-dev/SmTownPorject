@@ -31,7 +31,7 @@ export default function SmPlayground() {
     const settings = {
         dots: true,
         speed: 300,
-        infinite: false,
+        infinite: true,
         initialSlide: 0,
     };
 

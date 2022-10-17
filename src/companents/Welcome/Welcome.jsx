@@ -4,20 +4,18 @@ import { useEffect, useRef } from "react";
 import Logo from '../../assets/images/Logo.svg'
 import "./Welcome.scss"
 
-export default function Welcome({title}) {
+export default function Welcome({ title }) {
   const el = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [title], // Strings to display
-      // Speed settings, try diffrent values untill you get good results
+      strings: [title],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 100
     });
 
-    // Destropying
     return () => {
       typed.destroy();
     };

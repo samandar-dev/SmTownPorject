@@ -16,6 +16,7 @@ export default function SmMuseum() {
   ]
 
   const settings = {
+    // dots: true,
     infinite: false,
     speed: 300,
     initialSlide: 0,

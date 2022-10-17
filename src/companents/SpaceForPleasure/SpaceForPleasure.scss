@@ -3,8 +3,8 @@
 .space {
     position: relative;
     width: 100%;
-    padding-bottom: 209px;
     overflow: hidden;
+    padding-bottom: 209px;
     &__name-big {
         @include big-name-stiyle;
         @include flex-jc-center;
@@ -14,20 +14,21 @@
         width: 100%;
         margin: 0 auto;
         max-width: 1340px;
+        padding: 0 40px;
         margin-bottom: 20px;
     }
-    &__top-list{
-        width: 100%;
-        padding: 0 40px;
+    &__top-list-box {
+        padding-left: 50px;
+        margin-bottom: 86px;
     }
     &__top-list {
         @include flex-jc-between;
-        margin-bottom: 86px;
         overflow: hidden;
     }
     &__top-item {
         @include flex-jc-center;
         border-radius: $db-radius-2;
+        outline: none;
     }
     &__top-title {
         font-size: 20px;
@@ -35,7 +36,7 @@
         line-height: 24px;
         white-space: nowrap;
         color: $primary-color-7;
-        padding: 30px 20px 30px 20px;
+        padding: 24px 16px;
     }
     &__desc-img-box {
         width: 100%;
@@ -66,16 +67,20 @@
         letter-spacing: -0.02em;
         color: $primary-color-12;
         margin-bottom: 40px;
-        padding: 0 120px;
+        padding: 0 122px;
     }
     &__desc-logo-box {
         width: 100%;
         margin: 0 auto;
-        max-width: 390px;
+        max-width: 442px;
     }
     &__desc-logo-list {
         @include flex-jc-between;
         flex-wrap: wrap;
+    }
+    &__desc-logo-item {
+        min-width: 80px;
+        outline: none !important;
     }
     &__img {
         width: 100%;
@@ -86,6 +91,24 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+    &__slider {
+        width: 140px;
+        display: none;
+        .slick-slide {
+            width: auto !important;
+            margin: 0 5px;
+        }
+    }
+    .slick-list {
+        overflow: visible;
+    }
+    .slick-prev,
+    .slick-next {
+        display: none !important;
+    }
+    &__logo-slider {
+        display: none;
     }
 }
 .spaceItemAct {
@@ -100,6 +123,10 @@
 
 @media screen and (max-width: 1200px) {
     .space {
+        &__inner {
+            max-width: 1280px;
+            padding: 0;
+        }
         &__name-big {
             font-size: 90px;
             line-height: 108px;
@@ -113,6 +140,22 @@
         &__desc-text {
             padding: 0 40px;
         }
+        &__top-list-box {
+            padding-right: 50px;
+        }
+    }
+}
+@media screen and (max-width: 980px) {
+    .space {
+        &__top-list-box {
+            padding-right: 0;
+        }
+        &__top-list {
+            display: none;
+        }
+        &__slider {
+            display: block;
+        }
     }
 }
 @media screen and (max-width: 768px) {
@@ -120,6 +163,12 @@
         padding-bottom: 228px;
         &__desc-text {
             padding: 0;
+        }
+        &__top-list-box {
+            margin-bottom: 44px;
+        }
+        &__desc {
+            width: 80%;
         }
     }
 }
@@ -130,12 +179,15 @@
             max-width: auto;
             margin-bottom: 16px;
         }
+        &__desc {
+            width: 85%;
+        }
         &__name-big {
             font-size: 60px;
             line-height: 65px;
         }
-        &__top-list-box{
-            padding: 0 25px;
+        &__top-list-box {
+            padding-left: 30px;
         }
         &__desc-logo-list {
             flex-wrap: nowrap;
@@ -147,6 +199,27 @@
             height: 306px;
             max-width: auto;
         }
+        &__desc-logo-list {
+            display: none;
+        }
+        &__desc-logo-box {
+            max-width: 500px;
+        }
+        &__logo-slider {
+            width: 110px;
+            display: block;
+            .slick-track {
+                display: flex !important;
+                align-items: center;
+            }
+            .slick-slide {
+                width: auto !important;
+                margin: 0 auto;
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 360px) {
@@ -154,9 +227,7 @@
         padding-bottom: 158px;
         &__top-title {
             font-size: 16px;
-            font-weight: 400;
             line-height: 20px;
-            padding: 30px 20px 30px 20px;
         }
         &__name-big {
             font-size: 50px;
@@ -177,12 +248,18 @@
             margin-bottom: 35px;
             padding: 0;
         }
-        &__top-list-box{
-            padding: 0;
-        }
         &__img {
             height: 204px;
             max-width: auto;
+        }
+        &__slider {
+            width: 110px;
+            .slick-slide {
+                margin: 0;
+            }
+        }
+        &__top-list-box {
+            margin-bottom: 25px;
         }
     }
 }

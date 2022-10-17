@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import spaceImg from "../../assets/images/space-img.png"
@@ -13,55 +13,66 @@ import spaceLogo_8 from "../../assets/images/space-logo-8.png"
 import "./SpaceForPleasure.scss"
 
 export default function SpaceForPleasure() {
+    const [spaceItemActive, setSpaceItemActive] = useState(1)
+
     const settings = {
         speed: 300,
-    }
+        infinite: false,
+        initialSlide: 0,
+    };
 
-    
+    const spaceTopItems = [
+        { id: 1, title: "F&B", },
+        { id: 2, title: "Retail", },
+        { id: 3, title: "Book Cafe", },
+        { id: 4, title: "Goods Store" },
+        { id: 5, title: "Restaurant", },
+        { id: 6, title: "Attraction", },
+        { id: 7, title: "Sound Garden", },
+    ]
+
+    const spaceLogoItems = [
+        { id: 1, logo: spaceLogo_1, path: "https://www.starbucks.com/" },
+        { id: 2, logo: spaceLogo_2, path: "https://shakeshack.com/#/" },
+        { id: 3, logo: spaceLogo_8, path: "https://subway.ru/" },
+        { id: 4, logo: spaceLogo_4, path: "#" },
+        { id: 5, logo: spaceLogo_5, path: "#" },
+        { id: 6, logo: spaceLogo_3, path: "#" },
+        { id: 7, logo: spaceLogo_6, path: "#" },
+        { id: 8, logo: spaceLogo_7, path: "#" },
+    ]
 
     return (
         <div className='space'>
-            <p className="space__name-big">SPACE FOR PLEASURE</p>
-
             <div className="space__inner">
                 <div className="space__top-list-box">
                     <ul className="space__top-list">
-                        <li className="space__top-item spaceItemAct">
-                            <Link to={'/'}>
-                                <p className='space__top-title'>F&B</p>
-                            </Link>
-                        </li>
-                        <li className="space__top-item">
-                            <Link to={'/'}>
-                                <p className='space__top-title'>Retail</p>
-                            </Link>
-                        </li>
-                        <li className="space__top-item">
-                            <Link to={'/'}>
-                                <p className='space__top-title'>Book Cafe</p>
-                            </Link>
-                        </li>
-                        <li className="space__top-item">
-                            <Link to={'/'}>
-                                <p className='space__top-title'>Goods Store</p>
-                            </Link>
-                        </li>
-                        <li className="space__top-item">
-                            <Link to={'/'}>
-                                <p className='space__top-title'>Restaurant</p>
-                            </Link>
-                        </li>
-                        <li className="space__top-item">
-                            <Link to={'/'}>
-                                <p className='space__top-title'>Attraction</p>
-                            </Link>
-                        </li>
-                        <li className="space__top-item">
-                            <Link to={'/'}>
-                                <p className='space__top-title'>Sound Garden</p>
-                            </Link>
-                        </li>
+                        {spaceTopItems.map(item => (
+                            <li
+                                key={item.id}
+                                className={`space__top-item ${spaceItemActive === item.id ? "spaceItemAct" : ""}`}
+                                onClick={() => setSpaceItemActive(item.id)}
+                            >
+                                <Link to={'/'}>
+                                    <p className='space__top-title'>{item.title}</p>
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
+
+                    <Slider className='space__slider' {...settings}>
+                        {spaceTopItems.map(item => (
+                            <li
+                                key={item.id}
+                                className={`space__top-item ${spaceItemActive === item.id ? "spaceItemAct" : ""}`}
+                                onClick={() => setSpaceItemActive(item.id)}
+                            >
+                                <Link to={'/'}>
+                                    <p className='space__top-title'>{item.title}</p>
+                                </Link>
+                            </li>
+                        ))}
+                    </Slider>
                 </div>
 
                 <div className="space__desc-img-box">
@@ -76,34 +87,21 @@ export default function SpaceForPleasure() {
 
                         <div className="space__desc-logo-box">
                             <ul className="space__desc-logo-list">
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_1} alt="" />
-                                </li>
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_2} alt="" />
-                                </li>
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_8} alt="" />
-                                </li>
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_4} alt="" />
-                                </li>
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_5} alt="" />
-                                </li>
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_3} alt="" />
-                                </li>
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_6} alt="" />
-                                </li>
-                                <li className="space__desc-logo-item">
-                                    <img src={spaceLogo_7} alt="" />
-                                </li>
+                                {spaceLogoItems.map(item => (
+                                    <li className="space__desc-logo-item" key={item.id}>
+                                        <img src={item.logo} alt="브랜드" />
+                                    </li>
+                                ))}
                             </ul>
 
-                            <Slider {...settings}>
-
+                            <Slider className='space__logo-slider' {...settings}>
+                                {spaceLogoItems.map(item => (
+                                    <li className="space__desc-logo-item" key={item.id}>
+                                        <a href={item.path}>
+                                            <img src={item.logo} alt="브랜드" />
+                                        </a>
+                                    </li>
+                                ))}
                             </Slider>
                         </div>
                     </div>
@@ -113,6 +111,7 @@ export default function SpaceForPleasure() {
                     </div>
                 </div>
             </div>
+            <p className="space__name-big">SPACE FOR PLEASURE</p>
         </div>
     )
 }

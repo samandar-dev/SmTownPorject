@@ -75,6 +75,7 @@
             font-weight: 700;
             line-height: 13px;
             color: $primary-color-1;
+            cursor: default;
         }
     }
     &__btns-line-box {
@@ -146,6 +147,10 @@
             display: block !important;
         }
         &__item-img-one {
+            display: none !important;
+        }
+        .slick-prev,
+        .slick-next {
             display: none !important;
         }
     }

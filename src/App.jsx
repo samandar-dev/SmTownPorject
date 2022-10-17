@@ -1,17 +1,21 @@
+import { useEffect, useState } from 'react';
 import Home from './companents/Home/Home';
 import Welcome from './companents/Welcome/Welcome';
-import HeroSlider from './companents/HeroSlider/HeroSlider';
-import SearchLoginLan from './companents/SearchLoginLang/SearchLoginLang';
 import './App.scss';
 
 function App() {
+  const [welcomeActive, setWelcomeActive] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setWelcomeActive(true)
+    }, 4000)
+  }, []);
+
   return (
     <>
       <div className="app">
-        {/* <Welcome title={"SMTOWN 창원 홈페이지 메인"}/> */}
-        {/* <SearchLoginLan /> */}
-        <Home />
-        {/* <HeroSlider /> */}
+        {welcomeActive ? <Home /> : <Welcome title={"SMTOWN 창원 홈페이지 메인"} />}
       </div>
     </>
   );

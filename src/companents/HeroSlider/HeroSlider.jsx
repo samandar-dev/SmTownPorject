@@ -10,9 +10,6 @@ import "./HeroSlider.scss";
 
 export default function HeroSlider() {
     const sliderRef = useRef(null)
-    const [sliderArr, setSliderArr] = useState([])
-    const [sliderCount, serSliderCount] = useState(0)
-    const [sliderActive, setSliderActive] = useState(0)
 
     const heroSliderItems = [
         { id: 1, img: heroimg_3, },
@@ -26,26 +23,6 @@ export default function HeroSlider() {
         infinite: true,
         initialSlide: 1,
     };
-
-    const sliderActiveHandler = () => {
-        serSliderCount(sliderRef.current.innerSlider.track.node.children.length)
-        for (let i = 0; i < sliderCount; i++) {
-            sliderArr.push({
-                id: sliderRef.current.innerSlider.track.node.children[i].children[0].children[0].id,
-                className: sliderRef.current.innerSlider.track.node.children[i].className
-            })
-        }
-        sliderArr.map(item => {
-            if (item.className === "slick-slide slick-active slick-current") {
-                setSliderActive(item.id)
-            }
-        })
-    }
-
-    useEffect(() => {
-        // sliderActiveHandler()
-        console.log(sliderRef);
-    }, [sliderCount]);
 
     return (
         <div className='heroSlider'>
@@ -64,14 +41,14 @@ export default function HeroSlider() {
             </Slider>
 
             <div className="heroSlider__slider-btns">
-                <p onClick={() => sliderRef.current.innerSlider.slickPrev()}>0{sliderActive}</p>
+                <p onClick={() => sliderRef.current.innerSlider.slickPrev()}>01</p>
 
                 <div className="heroSlider__btns-line-box">
                     <span className='heroSlider__btn-line heroBtnsActLine'></span>
                     <span className='heroSlider__btn-line'></span>
                 </div>
 
-                <p onClick={() => sliderRef.current.innerSlider.slickNext()}>03</p>
+                <p onClick={() => sliderRef.current.innerSlider.slickNext()}>02</p>
             </div>
         </div>
     )

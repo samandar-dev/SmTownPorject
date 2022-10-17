@@ -7,8 +7,8 @@
     overflow: hidden;
     padding-bottom: 240px;
     &__desc {
-        position: relative;
         width: auto;
+        position: relative;
         margin-bottom: 148px;
     }
     &__title-one,
@@ -16,7 +16,7 @@
         @include title-stiyle;
         margin-bottom: 3px;
     }
-    &__title-two{
+    &__title-two {
         display: none;
     }
     &__tit {
@@ -26,11 +26,11 @@
         color: $primary-color-1;
     }
     &__name-box {
-        position: absolute;
         top: 100%;
-        transform: translate(0, 10px);
         right: 0;
         @include flex;
+        position: absolute;
+        transform: translate(0, 10px);
         justify-content: end;
     }
     &__name-small {
@@ -102,9 +102,6 @@
         .slick-slider {
             max-width: 455px !important;
         }
-        .slick-list {
-            // transform: translate(435px) !important;
-        }
         &__slider-img-box {
             max-width: 420px;
             height: 250px;
@@ -122,9 +119,6 @@
         }
         .slick-slider {
             max-width: 415px !important;
-        }
-        .slick-list {
-            // transform: translate(120px) !important;
         }
         &__slider-img-box {
             max-width: 380px;
@@ -162,24 +156,8 @@
             max-width: 395px !important;
         }
         .slick-list {
-            padding-bottom: 55px;
+            // padding-bottom: 55px;
             transform: translate(30px) !important;
-
-            // &::-webkit-scrollbar {
-            //     width: 80% !important;
-            //     margin: 0 20px;
-            //     height: 1px;
-            // }
-            // &::-webkit-scrollbar-track {
-            //     border: 1px solid #cacaca !important;
-            // }
-            // &::-webkit-scrollbar-thumb {
-            //     height: 1px !important;
-            //     border-radius: 5px;
-            //     background-color: $black;
-            //     outline: 1px solid black;
-            //     cursor: pointer !important;
-            // }
         }
         &__slider-img-box {
             max-width: 370px;
@@ -236,7 +214,7 @@
         &__title-one {
             display: none;
         }
-        &__title-two{
+        &__title-two {
             display: block !important;
         }
         &__tit {
