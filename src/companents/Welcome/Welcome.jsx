@@ -9,7 +9,7 @@ export default function Welcome({ title }) {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [title, "Samandar Bohodirov"],
+      strings: [title],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,
@@ -29,7 +29,7 @@ export default function Welcome({ title }) {
         </div>
 
         <div className="welcome__title-box">
-          <h1 className='welcome__title' ref={el}>SMTOWN 창원 홈페이지 메인</h1>
+          <h1 className='welcome__title' ref={el}></h1>
         </div>
       </div>
     </>
