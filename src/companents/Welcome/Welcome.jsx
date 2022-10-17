@@ -9,11 +9,11 @@ export default function Welcome({ title }) {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: [title],
+      strings: [title, "Samandar Bohodirov"],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,
-      backDelay: 100
+      // backDelay: 100
     });
 
     return () => {

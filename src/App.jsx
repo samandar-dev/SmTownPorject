@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setWelcomeActive(true)
-    }, 4000)
+    }, 15000)
   }, []);
 
   return (

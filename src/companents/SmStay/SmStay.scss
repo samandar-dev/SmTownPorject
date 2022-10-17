@@ -118,7 +118,8 @@
         margin-right: -7px;
     }
     &__item-desc-item {
-        width: 115px;
+        width: 100%;
+        max-width: 115px;
         margin: 0 7px;
     }
     &__item-desc-title {
@@ -131,8 +132,9 @@
     }
     &__item-desc-line {
         position: relative;
-        width: 115px;
+        width: 100%;
         height: 2px;
+        max-width: 115px;
         margin-bottom: 10px;
         background: rgba(255, 255, 255, 0.3) !important;
         span {
@@ -309,6 +311,11 @@
             bottom: 80px;
             margin-right: 78px;
         }
+        &__item-desc-title {
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 12px;
+        }
     }
 }
 @media screen and (max-width: 400px) {
@@ -326,6 +333,10 @@
         &__item-desc {
             bottom: 30px;
             left: 25px;
+        }
+        &__item-desc-title {
+            font-size: 14px;
+            line-height: 16px;
         }
     }
 }
