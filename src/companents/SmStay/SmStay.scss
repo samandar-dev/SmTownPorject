@@ -113,7 +113,7 @@
     }
     &__item-desc-list {
         @include flex;
-        align-items: end;
+        align-items: end !important;
         margin-left: -7px;
         margin-right: -7px;
     }
