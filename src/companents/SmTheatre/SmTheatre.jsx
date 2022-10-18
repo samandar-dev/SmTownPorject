@@ -8,7 +8,7 @@ import smTheatreImg_3 from "../../assets/images/smTheatre-img-3.png"
 import smTheatreImg_4 from "../../assets/images/smTheatre-img-4.png"
 import smTheatreSvImg from "../../assets/images/smTheatre-sv-img.svg"
 import "./SmTheatre.scss"
-
+import parse from 'html-react-parser';
 export default function SmTownTheatre() {
   const smTheatreItems = [
     { id: 1, img: smTheatreImg_2, title: "EXO PLANET #5 EXplOration -", date: '2019.11.23~', categor: 'SV' },
@@ -33,7 +33,7 @@ export default function SmTownTheatre() {
         <p className='smTheatre__name-big'>THEATRE</p>
 
         <div className="container">
-          <h3 className="smTheatre__title">{t("title")}</h3>
+          <h3 className="smTheatre__title">{parse(t("theatre-title"))}</h3>
 
           <div className="smTheatre__slider-box">
             <ul className="smTheatre__slider-list">

@@ -1,18 +1,22 @@
 @import "../../App.scss";
 
 .heroSlider {
-    position: relative;
     width: 100%;
     height: auto;
+    position: relative;
     padding-top: 54px;
     overflow: hidden;
+    z-index: 5;
+
     .slick-slider {
+        position: relative;
         width: 100%;
         margin: 0 auto;
         @include flex-jc-center;
         max-width: 1090px !important;
         transition: all 0.2s ease;
-    }
+    z-index: 5;
+}
     .slick-list {
         width: 100%;
         overflow: visible !important;

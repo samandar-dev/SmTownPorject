@@ -1,4 +1,25 @@
 {
     "welcome-title": "SMTOWN Changwon Homepage Main",
-    "title" :  "SMTOWN Changwon's unique space and a single performance hall with various specialized systems"
+    "theatre-title": "SMTOWN Changwon's unique space and a single <br/> performance hall with various specialized systems",
+    "museum-title": "Before the brilliant stage begins, experience the behind-the-scenes activities of <br/> SM artists! Try on stage costumes, dance together, listen to music, and take pictures!",
+    "playground-title": "SM PLAYGROUND, where anyone can play, enjoy and sing to their heart's <br/> content Learn the songs and choreography of SM artists and challenge even a single creator!",
+    "space-title": "Please enjoy various global restaurant brands such as Texas de Brazil, the first domestic store, Devil's Door, Modern Nulang, and YG Republic in a spacious space.",
+
+    "footer-nav-one": "Terms of service",
+    "footer-nav-two": "Privacy policy",
+    "footer-nav-thre": "Ticket Service Terms and Conditions",
+    "footer-nav-four": "Way to come",
+
+    "footer-link-one": "Changwon Cultural Complex Town",
+    "footer-link-two": "35-7, Pal-dong, Uichang-gu, Changwon-si, Gyeongnam",
+    "footer-link-thre": "Representative : Sejong Lee",
+    "footer-link-four": "Business registration number: 480-81-00898",
+    "footer-link-five": "Personal Information Manager: Sejong Lee",
+
+    "footer-select-value-one": "Family site",
+
+    "about-nav-one": "Introduce",
+    "about-nav-two": "Floor information",
+    "about-nav-thre": "Floor information",
+    "about-nav-four": "Way to come"
 }

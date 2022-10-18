@@ -24,7 +24,7 @@ export default function ViewModal({
             item.id === viewItem.parentID ?
               item.info.map(infoItem => (
                 infoItem.infoID === viewItem.chiledID ?
-                  <img src={infoItem.infoImg} alt="" />
+                  <img src={infoItem.infoImg} alt="" key={item.id} />
                   : ""
               ))
               : ""

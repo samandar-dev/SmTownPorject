@@ -18,7 +18,8 @@ export default function Sidebar() {
                             <li className="sidebar__item" key={inx + 1}>
                                 <Link to={'/'}>{item}</Link>
                             </li>
-                            : "")}
+                            : ""
+                        )}
                     </ul>
 
                     <div className="sidebar__logo-box col-4">
@@ -32,7 +33,8 @@ export default function Sidebar() {
                             <li className="sidebar__item" key={inx + 1}>
                                 <Link to={'/'}>{item}</Link>
                             </li>
-                            : "")}
+                            : ""
+                        )}
                     </ul>
                 </div>
             </div>

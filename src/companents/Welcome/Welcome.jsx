@@ -10,10 +10,10 @@ export default function Welcome({ title }) {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [title],
-      startDelay: 300,
-      typeSpeed: 100,
+      startDelay: 100,
+      typeSpeed: 80,
       backSpeed: 100,
-      // backDelay: 100
+      backDelay: 100
     });
 
     return () => {

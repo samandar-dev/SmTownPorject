@@ -6,6 +6,8 @@ import smMuseumImg_2 from "../../assets/images/smMuseum-img-2.png"
 import smMuseumImg_3 from "../../assets/images/smMuseum-img-3.png"
 import smMuseumImg_4 from "../../assets/images/smMuseum-img-4.png"
 import "./SmMuseum.scss"
+import parse from 'html-react-parser';
+import { useTranslation } from 'react-i18next';
 
 export default function SmMuseum() {
   const smMuseumItems = [
@@ -14,6 +16,7 @@ export default function SmMuseum() {
     { id: 3, img: smMuseumImg_3, title: "Digital Archive" },
     { id: 4, img: smMuseumImg_2, title: "Concert hall" },
   ]
+  const {t} = useTranslation()
 
   const settings = {
     // dots: true,
@@ -26,10 +29,7 @@ export default function SmMuseum() {
     <div className='smMuseum'>
       <div className="container">
         <div className="smMuseum__desc">
-          <h3 className='smMuseum__title-one'>
-            찬란한 무대의 시작 전, SM 아티스트들의 무대 뒤 활동을 직접 체험해보세요! <br />
-            무대 의상을 입어보고, 같이 춤 춰보고, 음악 듣고, 사진 찍고!
-          </h3>
+          <h3 className='smMuseum__title-one'>{parse(t("museum-title"))}</h3>
 
           <h3 className='smMuseum__title-two'>
             찬란한 무대의 시작 전, <br /> SM 아티스트들의 무대 뒤 활동을 직접 체험해보세요!

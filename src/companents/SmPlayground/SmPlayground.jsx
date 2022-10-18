@@ -1,4 +1,6 @@
+import parse from 'html-react-parser';
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import SmPlayImg_1 from '../../assets/images/smPlay-img-1.png';
@@ -35,13 +37,12 @@ export default function SmPlayground() {
         initialSlide: 0,
     };
 
+    const {t} = useTranslation()
+
     return (
         <>
             <div className='smPlay'>
-                <h3 className='smPlay__title-one'>
-                    누구나 마음껏 뛰놀고, 즐기고, 노래하는 <span>SM PLAYGROUND</span> <br />
-                    SM 아티스트들의 노래와 안무를 배우고 1인 크리에이터까지 도전!
-                </h3>
+                <h3 className='smPlay__title-one'>{parse(t("playground-title"))}</h3>
 
                 <h3 className='smPlay__title-two'>
                     누구나 마음껏 뛰놀고, 즐기고, 노래하는 <br /> <span>SM PLAYGROUND</span>

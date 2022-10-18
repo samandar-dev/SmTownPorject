@@ -5,8 +5,25 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { BsInstagram, BsArrowUp } from "react-icons/bs";
 import FooterLogo from "../../assets/images/footer-logo.svg"
 import "./Footer.scss"
+import { useTranslation } from 'react-i18next';
+import parse from 'html-react-parser';
 
 export default function Footer() {
+    const { t } = useTranslation()
+    const footerdescitemsOne = [
+        { id: 1, text: t("footer-nav-one") },
+        { id: 2, text: t("footer-nav-two") },
+        { id: 3, text: t("footer-nav-thre") },
+        { id: 4, text: t("footer-nav-four") },
+    ]
+    const footerdescitemsTwo = [
+        { id: 1, text: t("footer-link-one") },
+        { id: 2, text: t("footer-link-two") },
+        { id: 3, text: t("footer-link-thre") },
+        { id: 4, text: t("footer-link-four") },
+        { id: 5, text: t("footer-link-five") },
+    ]
+
     return (
         <div className='footer'>
             <div className="container">
@@ -24,52 +41,21 @@ export default function Footer() {
                             <div className="footer__desc">
                                 <ul className="footer__desc-list footer__desc-list-one">
                                     <li className="footer__desc-item-top">
-                                        <Link to={"/"}>
-                                            <p>이용약관</p>
-                                        </Link>
-                                    </li>
-                                    <li className="footer__desc-item-top">
-                                        <Link to={"/"}>
-                                            <p>개인정보처리방침</p>
-                                        </Link>
-                                    </li>
-                                    <li className="footer__desc-item-top">
-                                        <Link to={"/"}>
-                                            <p>티켓서비스이용약관</p>
-                                        </Link>
-                                    </li>
-                                    <li className="footer__desc-item-top">
-                                        <Link to={"/"}>
-                                            <p>오시는길</p>
-                                        </Link>
+                                        {footerdescitemsOne.map(item => (
+                                            <Link to={`/`} key={item.id}>
+                                                <p>{parse(item.text)}</p>
+                                            </Link>
+                                        ))}
                                     </li>
                                 </ul>
 
                                 <ul className="footer__desc-list footer__desc-list-two">
                                     <li className="footer__desc-item">
-                                        <Link to={"/"}>
-                                            <p>(주)창원문화복합타운</p>
-                                        </Link>
-                                    </li>
-                                    <li className="footer__desc-item">
-                                        <Link to={"/"}>
-                                            <p>경남 창원시 의창구 팔동 35-7</p>
-                                        </Link>
-                                    </li>
-                                    <li className="footer__desc-item">
-                                        <Link to={"/"}>
-                                            <p>대표자 : 이세종</p>
-                                        </Link>
-                                    </li>
-                                    <li className="footer__desc-item">
-                                        <Link to={"/"}>
-                                            <p>사업자등록번호 : 480-81-00898</p>
-                                        </Link>
-                                    </li>
-                                    <li className="footer__desc-item">
-                                        <Link to={"/"}>
-                                            <p>개인정보책임자 : 이세종</p>
-                                        </Link>
+                                        {footerdescitemsTwo.map(item => (
+                                            <Link to={`/`} key={item.id}>
+                                                <p>{parse(item.text)}</p>
+                                            </Link>
+                                        ))}
                                     </li>
                                 </ul>
 
@@ -96,9 +82,9 @@ export default function Footer() {
                                 </ul>
 
                                 <select className="footer__nwtworks-select">
-                                    <option value="패밀리 사이트">패밀리 사이트</option>
-                                    <option value="패밀리 사이트">패밀리 사이트</option>
-                                    <option value="패밀리 사이트">패밀리 사이트</option>
+                                    <option value="패밀리 사이트">{parse(t("footer-select-value-one"))}</option>
+                                    <option value="패밀리 사이트">{parse(t("footer-select-value-one"))}</option>
+                                    <option value="패밀리 사이트">{parse(t("footer-select-value-one"))}</option>
                                 </select>
                             </div>
                         </div>

@@ -88,6 +88,9 @@
     }
     :nth-child(2) {
       margin-right: 40px;
+      p {
+        border-right: 0;
+      }
     }
     :nth-child(4) {
       a {
@@ -210,7 +213,7 @@
       margin-right: 0;
       margin-bottom: 30px;
     }
-    &__networks{
+    &__networks {
       margin-bottom: 60px;
     }
   }
@@ -224,7 +227,7 @@
         margin-right: 0px;
       }
     }
-    &__networks{
+    &__networks {
       flex-wrap: wrap;
       justify-content: start;
     }

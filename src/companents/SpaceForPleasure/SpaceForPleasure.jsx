@@ -1,4 +1,6 @@
+import parse from 'html-react-parser'
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import spaceImg from "../../assets/images/space-img.png"
@@ -14,6 +16,7 @@ import "./SpaceForPleasure.scss"
 
 export default function SpaceForPleasure() {
     const [spaceItemActive, setSpaceItemActive] = useState(1)
+    const {t} = useTranslation()
 
     const settings = {
         speed: 300,
@@ -80,10 +83,7 @@ export default function SpaceForPleasure() {
                         <h3 className="space__desc-title">프리미엄 외식공간</h3>
                         <p className='space__desc-link'>Premium Dining Out Place</p>
 
-                        <p className="space__desc-text">
-                            국내 1호 매장인 텍사스데브라질, 데블스도어와 모던눌랑, YG리퍼블릭 등 다양한
-                            글로벌 외식 브랜드들을 넓은 공간에서 여유있게 만끽하시기 바랍니다.
-                        </p>
+                        <p className="space__desc-text">{parse(t("space-title"))}</p>
 
                         <div className="space__desc-logo-box">
                             <ul className="space__desc-logo-list">

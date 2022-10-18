@@ -1,4 +1,26 @@
 {
     "welcome-title": "SMTOWN 창원 홈페이지 메인",
-    "title" :  "SMTOWN창원만의 유니크한 공간과 다양한 전문시스템을 가진 단 하나의 공연장"
+    "theatre-title": "SMTOWN창원만의 유니크한 공간과 <br/> 다양한 전문시스템을 가진 단 하나의 공연장",
+    "museum-title": "찬란한 무대의 시작 전, SM 아티스트들의 무대 뒤 활동을 직접 체험해보세요! <br/> 무대 의상을 입어보고, 같이 춤 춰보고, 음악 듣고, 사진 찍고!",
+    "playground-title": "누구나 마음껏 뛰놀고, 즐기고, 노래하는 <span>SM PLAYGROUND</span> <br/> SM 아티스트들의 노래와 안무를 배우고 1인 크리에이터까지 도전!",
+    "space-title": "국내 1호 매장인 텍사스데브라질, 데블스도어와 모던눌랑, YG리퍼블릭 등 다양한 글로벌 외식 브랜드들을 넓은 공간에서 여유있게 만끽하시기 바랍니다.",
+
+    "footer-nav-one": "이용약관",
+    "footer-nav-two": "개인정보처리방침",
+    "footer-nav-thre": "티켓서비스이용약관",
+    "footer-nav-four": "오시는길",
+
+    "footer-link-one": "(주)창원문화복합타운",
+    "footer-link-two": "경남 창원시 의창구 팔동 35-7",
+    "footer-link-thre": "대표자 : 이세종",
+    "footer-link-four": "사업자등록번호 : 480-81-00898",
+    "footer-link-five": "개인정보책임자 : 이세종",
+
+    "footer-select-value-one": "패밀리 사이트",
+
+    "about-nav-one": "소개",
+    "about-nav-two": "층별안내",
+    "about-nav-thre": "층별안내",
+    "about-nav-four": "오시는길"
+
 }
