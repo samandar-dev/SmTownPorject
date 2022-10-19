@@ -8,7 +8,7 @@ import "./Footer.scss"
 import { useTranslation } from 'react-i18next';
 import parse from 'html-react-parser';
 
-export default function Footer() {
+export default function Footer(props) {
     const { t } = useTranslation()
     const footerdescitemsOne = [
         { id: 1, text: t("footer-nav-one") },
@@ -28,16 +28,18 @@ export default function Footer() {
         <div className='footer'>
             <div className="container">
                 <div className="footer__inner">
-                    <button className="footer__top-btn" onClick={() => window.scrollTo(0, 0)}>
+                    <button className="footer__top-btn" onClick={() => window.scrollTo(0, 0)}
+                        style={{ display: `${props.col === 'white' ? "block" : "none"}` }}
+                    >
                         <BsArrowUp />
                     </button>
 
-                    <div className="footer__logo-desc">
-                        <div className="footer__logo">
+                    <div className="footer__logo-desc" >
+                        <div className="footer__logo" style={{ display: `${props.col === 'white' ? "block" : "none"}` }}>
                             <img src={FooterLogo} alt="footer logo" />
                         </div>
 
-                        <div className="footer__info">
+                        <div className="footer__info" style={{ alignItems: `${props.col === 'white' ? "end" : "start"}` }}>
                             <div className="footer__desc">
                                 <ul className="footer__desc-list footer__desc-list-one">
                                     <li className="footer__desc-item-top">

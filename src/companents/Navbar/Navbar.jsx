@@ -15,6 +15,10 @@ export default function Navbar(props) {
         "SMTOWN <br/> CHANGWON", "SMTOWN <br/> THEATRE", "SMTOWN <br/> MUSEUM",
         "THE PLAY <br/> GROUND K-POP", "THE <br/> STAY K-POP", "NOTICE & <br/> EVENT"
     ]
+    const sidebarItemsTwo = [
+        "SMTOWN <br/> CHANGWON", "SMTOWN <br/> THEATRE", "SMTOWN <br/> MUSEUM",
+        "THE PLAY GROUND <br/> K-POP", "THE STAY <br/> K-POP", "NOTICE & <br/> EVENT"
+    ]
 
     return (
         <div className='navbar'>
@@ -23,7 +27,7 @@ export default function Navbar(props) {
             <div className="container">
                 <SearchLoginLang col={props.col} />
 
-                <div className="navbar__inner">
+                <div className="navbar__inner" style={{ justifyContent: `${props.col === 'white' ? "space-between" : 'center'}` }}>
                     <Select
                         value={age}
                         id="demo-simple-select"
@@ -31,42 +35,61 @@ export default function Navbar(props) {
                         labelId="demo-simple-select-label"
                         onChange={(e) => setAge(e.target.value)}
                     >
-                        <MenuItem value="STORE & INFO">STORE & INFO</MenuItem>
-                        <MenuItem value="Twenty">Twenty</MenuItem>
-                        <MenuItem value="Thirty">Thirty</MenuItem>
+                        <MenuItem value="STORE & INFO" style={{ color: `${props.col === 'white' ? "#fff" : '#000'}` }}>STORE & INFO</MenuItem>
+                        <MenuItem value="Twenty" style={{ color: `${props.col === 'white' ? "#fff" : '#000'}` }}>Twenty</MenuItem>
+                        <MenuItem value="Thirty" style={{ color: `${props.col === 'white' ? "#fff" : '#000'}` }}>Thirty</MenuItem>
                     </Select>
 
-                    <ul className="navbar__list navbar__left-list">
-                        {sidebarItems.map((item, inx) => inx + 1 <= 3 ?
-                            <li className="navbar__item" key={inx + 1}>
-                                <NavLink to={'/'} style={{ color: `${props.col === 'white' ? "#fff" : "#000"}` }}>{parse(item)}</NavLink>
-                            </li>
-                            : ""
-                        )}
+                    <ul className="navbar__list navbar__left-list" style={{ maxWidth: `${props.col === 'white' ? '405px' : "384px"}` }}>
+                        {
+                            props.col === 'white'
+                                ? sidebarItems.map((item, inx) => inx + 1 <= 3 ?
+                                    <li className="navbar__item" key={inx + 1}>
+                                        <NavLink to={'/'}>{parse(item)}</NavLink>
+                                    </li>
+                                    : ""
+                                )
+                                : sidebarItemsTwo.map((item, inx) => inx + 1 <= 3 ?
+                                    <li className="navbar__item" key={inx + 1} style={{ width: "100%", maxWidth: "127px", textAlign: "center" }}>
+                                        <NavLink to={'/'} style={{ color: '#000', textAlign: 'center', fontWeight: '400' }}>{parse(item)}</NavLink>
+                                    </li>
+                                    : ""
+                                )
+                        }
                     </ul>
 
-                    <div className="navbar__logo-box">
-                        {props.col === 'white' ?
-                            <NavLink to={"/"}>
-                                <img src={Logo} alt="navbar logo" style={{ width: "74px", height: "70px" }} />
-                            </NavLink> :
-                            <NavLink to={"/"}>
-                                <img src={BlackLogo} alt="navbar logo" style={{ width: "85px", height: "77px" }} />
-                            </NavLink>
+                    <div className={`navbar__logo-box navbar__logo-box-two`} style={{ maxWidth: `${props.col === 'white' ? '426px' : "234px"}` }}>
+                        {
+                            props.col === 'white'
+                                ? <NavLink to={"/"}>
+                                    <img src={Logo} alt="navbar logo" style={{ width: "74px", height: "70px" }} />
+                                </NavLink>
+                                : <NavLink to={"/"}>
+                                    <img src={BlackLogo} alt="navbar logo" style={{ width: "85px", height: "77px" }} />
+                                </NavLink>
                         }
                     </div>
 
-                    <ul className="navbar__list navbar__right-list">
-                        {sidebarItems.map((item, inx) => inx + 1 > 3 ?
-                            <li className="navbar__item" key={inx + 1}>
-                                <NavLink to={'/'} style={{ color: `${props.col === 'white' ? "#fff" : "#000"}` }}>{parse(item)}</NavLink>
-                            </li>
-                            : ""
-                        )}
+                    <ul className="navbar__list navbar__left-list" style={{ maxWidth: `${props.col === 'white' ? '405px' : "384px"}` }}>
+                        {
+                            props.col === 'white'
+                                ? sidebarItems.map((item, inx) => inx + 1 > 3 ?
+                                    <li className="navbar__item" key={inx + 1}>
+                                        <NavLink to={'/'}>{parse(item)}</NavLink>
+                                    </li>
+                                    : ""
+                                )
+                                : sidebarItemsTwo.map((item, inx) => inx + 1 > 3 ?
+                                    <li className="navbar__item" key={inx + 1} style={{ width: "100%", maxWidth: "127px", textAlign: "center" }}>
+                                        <NavLink to={'/'} style={{ color: '#000', textAlign: 'center', fontWeight: '400' }}>{parse(item)}</NavLink>
+                                    </li>
+                                    : ""
+                                )
+                        }
                     </ul>
 
                     <div className="navbar__menu-box">
-                        <button className="navbar__menu-btn">
+                        <button className="navbar__menu-btn" style={{ color: `${props.col === 'white' ? "#fff" : '#000'}` }}>
                             <AiOutlineMenu />
                         </button>
                     </div>

@@ -10,7 +10,7 @@ export default function SearchLoginLan(props) {
             <div className='searchLoginLang'>
                 <ul className="searchLoginLang__list">
                     <li className="searchLoginLang__item">
-                        <Search />
+                        <Search col={props.col}/>
                     </li>
                     <li className="searchLoginLang__item">
                         <Login col={props.col}/>

@@ -8,6 +8,7 @@
         width: 100%;
         position: relative;
         @include flex-jc-between;
+        justify-content: center;
     }
     &__bg-color {
         top: 0;
@@ -22,7 +23,6 @@
         width: 125px;
         display: none !important;
         div {
-            color: $white;
             font-size: 15px;
             font-weight: 400;
             line-height: 22px;
@@ -41,19 +41,11 @@
         }
     }
     &__list {
+        width: 100%;
         @include flex-jc-between;
-    }
-    &__left-list {
-        width: 100%;
-        max-width: 405px;
-    }
-    &__right-list {
-        width: 100%;
-        max-width: 405px;
     }
     &__logo-box {
         width: 100%;
-        max-width: 426px;
         text-align: center;
         img {
             width: 100%;
@@ -89,12 +81,16 @@
         &__bg-color {
             height: 690px;
         }
+        &__item{
+            margin: 0 10px;
+        }
     }
 }
 @media screen and (max-width: 900px) {
     .navbar {
         &__inner {
             padding-top: 30px;
+            justify-content: space-between !important;
         }
         &__store-select {
             display: block !important;
@@ -170,6 +166,9 @@
     .navbar {
         &__bg-color {
             height: 430px;
+        }
+        &__logo-box {
+            margin: 0;
         }
     }
 }
