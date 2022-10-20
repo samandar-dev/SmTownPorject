@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Welcome from './companents/Welcome/Welcome';
 import './App.scss';
 import SmChangAbout from './companents/SmChangAbout/SmChangAbout';
-import { Routes } from 'react-router-dom';
+import { Route, Router, Routes } from 'react-router-dom';
 
 function App() {
   const { t } = useTranslation()
@@ -21,10 +21,6 @@ function App() {
       <div className="app">
         {/* {welcomeActive ? <Home /> : <Welcome title={t("welcome-title")} />} */}
         <SmChangAbout />
-
-        <Routes>
-          
-        </Routes>
       </div>
     </>
   );

@@ -7,10 +7,10 @@ export default function AboutNav() {
     const { t } = useTranslation()
     const [navActive, setNavActive] = useState(1)
     const aboutNav = [
-        { id: 1, title: t("about-nav-one") },
-        { id: 2, title: t("about-nav-two") },
-        { id: 3, title: t("about-nav-thre") },
-        { id: 4, title: t("about-nav-four") },
+        { id: 1, path: 'about1', title: t("about-nav-one") },
+        { id: 2, path: 'about2', title: t("about-nav-two") },
+        { id: 3, path: 'about3', title: t("about-nav-thre") },
+        { id: 4, path: 'about4', title: t("about-nav-four") },
     ]
 
     return (
@@ -21,7 +21,7 @@ export default function AboutNav() {
                         <ul className="about-nav__list">
                             {aboutNav.map(item => (
                                 <li className="about-nav__item" key={item.id} onClick={() => setNavActive(item.id)}>
-                                    <Link to={"/"}>
+                                    <Link to={"/" + item.path}>
                                         <button className={`about-nav__item-btn ${navActive === item.id ? "navAct" : ""}`}>{item.title}</button>
                                     </Link>
                                 </li>
