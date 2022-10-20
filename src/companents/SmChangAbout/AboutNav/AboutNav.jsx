@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import "./AboutNav.scss";
 
 export default function AboutNav() {
     const { t } = useTranslation()
+    const [navActive, setNavActive] = useState(1)
     const aboutNav = [
         { id: 1, title: t("about-nav-one") },
         { id: 2, title: t("about-nav-two") },
@@ -19,8 +20,10 @@ export default function AboutNav() {
                     <div className="container">
                         <ul className="about-nav__list">
                             {aboutNav.map(item => (
-                                <li className="about-nav__item" key={item.id}>
-                                    <Link to={"/"}>{item.title}</Link>
+                                <li className="about-nav__item" key={item.id} onClick={() => setNavActive(item.id)}>
+                                    <Link to={"/"}>
+                                        <button className={`about-nav__item-btn ${navActive === item.id ? "navAct" : ""}`}>{item.title}</button>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
