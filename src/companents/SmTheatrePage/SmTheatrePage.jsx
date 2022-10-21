@@ -31,7 +31,7 @@ export default function SmTheatrePage() {
                     <div className="thea-page__main">
                         <div className="thea-page__content">
                             <div className="thea-page__content-left-img-box">
-                                {/* <img src="https://picsum.photos/590/550" alt="" /> */}
+                                <img src="https://picsum.photos/590/550" alt="" />
                             </div>
 
                             <div className="thea-page__content-right">
@@ -79,7 +79,7 @@ export default function SmTheatrePage() {
                             {smtheaPageitems.map(item => (
                                 <li className="thea-page__items-item">
                                     <div className="thea-page__items-img-box">
-                                        {/* <img src="" alt="" /> */}
+                                        <img src="https://picsum.photos/480/270" alt="" />
                                     </div>
 
                                     <div className="thea-page__items-desc">
@@ -97,7 +97,10 @@ export default function SmTheatrePage() {
                         <div className="thea-page__facilities-list-box">
                             <ul className="thea-page__facilities-list">
                                 {smtheaitems.map(item => (
-                                    <li className={`thea-page__facilities-item ${facilActiveitem === item.id ? "facilActItem" : "facilNoAct"}`} key={item.id} onMouseMove={() => setFacilActiveItem(item.id)} >
+                                    <li
+                                        className={`thea-page__facilities-item ${facilActiveitem === item.id ? "facilActItem" : "facilNoAct"}`}
+                                        key={item.id} onMouseMove={() => setFacilActiveItem(item.id)}
+                                    >
                                         <div className="thea-page__facilities-item-img-box">
                                             <img src="https://picsum.photos/480/270" alt="" />
                                         </div>
