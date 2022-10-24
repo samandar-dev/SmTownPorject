@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import "./TheatreCurrent.scss";
 
-export default function SmTheatreCurrent() {
+export default function TheatreCurrent(props) {
     const [sliderAct, setSliderAct] = useState(1)
     const [categor, setCategor] = useState('all')
     const [categorBtnAct, setCategorBtnAct] = useState(1)
@@ -75,81 +76,6 @@ export default function SmTheatreCurrent() {
                 { descId: 2, descTime: "16:00", desctext: "[SV] EXO PLANET #5 - EXlpOration" },
             ]
         },
-        {
-            id: 8,
-            title: "(월요일)",
-            data: "2020-03-30",
-            desc: [
-                { descId: 1, descTime: "12:00", desctext: "[SV] 2015 EXO-LOVE CONCERT in..." },
-                { descId: 2, descTime: "16:00", desctext: "[SV] EXO PLANET #5 - EXlpOration" },
-            ]
-        },
-        {
-            id: 9,
-            title: "(월요일)",
-            data: "2020-03-31",
-            desc: [
-                { descId: 1, descTime: "12:00", desctext: "[SV] 2015 EXO-LOVE CONCERT in..." },
-                { descId: 2, descTime: "16:00", desctext: "[SV] EXO PLANET #5 - EXlpOration" },
-                { descId: 3, descTime: "17:00", desctext: "[FILM] 1st PRESENT" },
-            ]
-        },
-        {
-            id: 10,
-            title: "(월요일)",
-            data: "2020-03-32",
-            desc: [
-                { descId: 1, descTime: "12:00", desctext: "[SV] 2015 EXO-LOVE CONCERT in..." },
-                { descId: 2, descTime: "16:00", desctext: "[SV] EXO PLANET #5 - EXlpOration" },
-                { descId: 3, descTime: "17:00", desctext: "[FILM] 1st PRESENT" },
-            ]
-        },
-    ]
-    const mainItems = [
-        {
-            id: 1,
-            categor: "전체",
-            title: "[SV] EXO PLANET #5 - ExplOration - ",
-            text: "멤버별 개성 넘치는 무대와 화려한 단체 퍼포먼스로 공연장을 가득 채웠던 엑소의 EXO PLANET #5-EXplOration 콘서트를 11월 23일부터 다시 만나실 수 있습니다. SMTOWN THEATRE 극장의 3면 영상과 차원이 다른 사운드로 서라운드 뷰잉 공연을 즐겨보세요.",
-            items: [
-                { itemsId: 1, name: "출연자", value: "EXO" },
-                { itemsId: 2, name: "공연일자", value: "2019.11.23 ~ " },
-                { itemsId: 3, name: "관람등급", value: "8세 이상 관람가" },
-            ]
-        },
-        {
-            id: 2,
-            categor: "Surround Viewing",
-            title: "[SV] EXO PLANET #5 - ExplOration - ",
-            text: "멤버별 개성 넘치는 무대와 화려한 단체 퍼포먼스로 공연장을 가득 채웠던 엑소의 EXO PLANET #5-EXplOration 콘서트를 11월 23일부터 다시 만나실 수 있습니다. SMTOWN THEATRE 극장의 3면 영상과 차원이 다른 사운드로 서라운드 뷰잉 공연을 즐겨보세요.",
-            items: [
-                { itemsId: 1, name: "출연자", value: "EXO" },
-                { itemsId: 2, name: "공연일자", value: "2019.11.23 ~ " },
-                { itemsId: 3, name: "관람등급", value: "8세 이상 관람가" },
-            ]
-        },
-        {
-            id: 3,
-            categor: "홀로그램",
-            title: "[SV] EXO PLANET #5 - ExplOration - ",
-            text: "멤버별 개성 넘치는 무대와 화려한 단체 퍼포먼스로 공연장을 가득 채웠던 엑소의 EXO PLANET #5-EXplOration 콘서트를 11월 23일부터 다시 만나실 수 있습니다. SMTOWN THEATRE 극장의 3면 영상과 차원이 다른 사운드로 서라운드 뷰잉 공연을 즐겨보세요.",
-            items: [
-                { itemsId: 1, name: "출연자", value: "EXO" },
-                { itemsId: 2, name: "공연일자", value: "2019.11.23 ~ " },
-                { itemsId: 3, name: "관람등급", value: "8세 이상 관람가" },
-            ]
-        },
-        {
-            id: 4,
-            categor: "라이브",
-            title: "[SV] EXO PLANET #5 - ExplOration - ",
-            text: "멤버별 개성 넘치는 무대와 화려한 단체 퍼포먼스로 공연장을 가득 채웠던 엑소의 EXO PLANET #5-EXplOration 콘서트를 11월 23일부터 다시 만나실 수 있습니다. SMTOWN THEATRE 극장의 3면 영상과 차원이 다른 사운드로 서라운드 뷰잉 공연을 즐겨보세요.",
-            items: [
-                { itemsId: 1, name: "출연자", value: "EXO" },
-                { itemsId: 2, name: "공연일자", value: "2019.11.23 ~ " },
-                { itemsId: 3, name: "관람등급", value: "8세 이상 관람가" },
-            ]
-        },
     ]
 
     return (
@@ -189,7 +115,8 @@ export default function SmTheatreCurrent() {
                             </ul>
                         </div>
 
-                        <div className="thea-current__slider-btn-box" onClick={() => setSliderAct(sliderAct <= sliderItems.length - 5 ? sliderAct + 1 : sliderAct)}>
+                        <div className="thea-current__slider-btn-box" onClick={() => setSliderAct(sliderAct <= sliderItems.length - 5 ? sliderAct + 1 : sliderAct)}
+                        >
                             <button className="thea-current__slider-right-btn"><AiFillCaretRight /></button>
                         </div>
                     </div>
@@ -197,8 +124,8 @@ export default function SmTheatreCurrent() {
                     <div className="thea-current__main">
                         <div className="thea-current__main-categor-box">
                             <ul className="thea-current__main-categor-list">
-                                {mainItems.map(item => (
-                                    <li className={`thea-current__main-categor-item ${item.id === categorBtnAct ? "categorAct" : ""}`}>
+                                {props.mainItems.map(item => (
+                                    <li className={`thea-current__main-categor-item ${item.id === categorBtnAct ? "categorAct" : ""}`} key={item.id}>
                                         <button className='thea-current__main-categor-name' onClick={() => (setCategor(item.categor), setCategorBtnAct(item.id))}>{item.categor}</button>
                                     </li>
                                 ))}
@@ -207,8 +134,8 @@ export default function SmTheatreCurrent() {
 
                         <div className="thea-current__main-content">
                             <ul className="thea-current__main-content-list">
-                                {mainItems.map(item => (
-                                    <li className="thea-current__main-content-item">
+                                {props.mainItems.map(item => (
+                                    <li className="thea-current__main-content-item" key={item.id}>
                                         <div className="thea-current__main-content-item-img-box">
                                             {/* <img src="/" alt="" /> */}
                                         </div>
@@ -220,7 +147,7 @@ export default function SmTheatreCurrent() {
 
                                             <ul className="thea-current__main-content-item-list">
                                                 {item.items.map(itemCon => (
-                                                    <li className="thea-current__main-content-item-item">
+                                                    <li className="thea-current__main-content-item-item" key={itemCon.itemsId}>
                                                         <div>
                                                             <p>{itemCon.name}</p>
                                                         </div>
@@ -236,7 +163,9 @@ export default function SmTheatreCurrent() {
                                             </div>
 
                                             <div className="thea-current__main-content-item-btns">
-                                                <button className="thea-current__main-content-item-btn">상세보기</button>
+                                                <Link to={`/theatre3/${item.id}`}>
+                                                    <button className="thea-current__main-content-item-btn">상세보기</button>
+                                                </Link>
                                                 <button className="thea-current__main-content-item-btn">예매하기</button>
                                             </div>
                                         </div>

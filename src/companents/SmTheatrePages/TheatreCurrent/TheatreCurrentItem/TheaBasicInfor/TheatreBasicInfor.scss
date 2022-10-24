@@ -1,0 +1,41 @@
+@import "../../../../../App.scss";
+
+.thea-item {
+    &__info-desc {
+        width: 100%;
+        height: auto;
+        position: relative;
+        transition: all .3s ease;
+    }
+    &__info-desc-img-box {
+        width: 100%;
+        height: 466px;
+        position: relative;
+        margin-bottom: 100px;
+        background: $primary-color-5;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__info-desc-texts {
+        width: 100%;
+
+        h4 {
+            color: $black;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 26px;
+            font-family: "Roboto";
+            margin-bottom: 36px;
+        }
+        p {
+            color: $black;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 23px;
+            font-family: "Roboto";
+        }
+    }
+}

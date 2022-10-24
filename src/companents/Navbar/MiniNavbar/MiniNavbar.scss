@@ -13,9 +13,12 @@
     }
     &__list {
         width: 100%;
-        margin: 0 auto;
-        max-width: 860px;
-        @include flex-jc-between;
+        @include flex-jc-center;
+    }
+    &__item {
+        margin: 0 24px;
+        min-width: 180px;
+        text-align: center;
     }
     &__item-btn {
         color: $white;
@@ -24,7 +27,6 @@
         line-height: 21px;
         text-align: center;
         font-family: "Roboto";
-        transition: all .2s ease;
     }
 }
 .navAct {
