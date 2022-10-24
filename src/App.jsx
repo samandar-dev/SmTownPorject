@@ -1,10 +1,10 @@
-import Home from './companents/Home/Home';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Welcome from './companents/Welcome/Welcome';
-import './App.scss';
+import { Route, Routes } from 'react-router-dom';
+import SmTownHome from './companents/SmTownHome/SmTownHome';
 import SmChangAbout from './companents/SmChangAbout/SmChangAbout';
-import { Route, Router, Routes } from 'react-router-dom';
+import './App.scss';
 
 function App() {
   const { t } = useTranslation()
@@ -19,8 +19,16 @@ function App() {
   return (
     <>
       <div className="app">
-        {/* {welcomeActive ? <Home /> : <Welcome title={t("welcome-title")} />} */}
-        <SmChangAbout />
+        {welcomeActive
+          ? <Routes>
+            <Route path='/' element={<SmTownHome />} />
+            <Route path='/home' element={<SmTownHome />} />
+            <Route path='/about1' element={<SmChangAbout />} />
+            <Route path='/about2' element={<SmChangAbout />} />
+            <Route path='/about3' element={<SmChangAbout />} />
+            <Route path='/about4' element={<SmChangAbout />} />
+          </Routes>
+          : <Welcome title={t("welcome-title")} />}
       </div>
     </>
   );

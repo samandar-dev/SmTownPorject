@@ -1,500 +1,242 @@
 @import "../../App.scss";
 
-.smTheatre {
+.thea-page {
     width: 100%;
     height: auto;
+    margin: 0 auto;
+    max-width: 1440px;
     position: relative;
-    padding-top: 243px;
-    padding-bottom: 308px;
-    overflow: hidden;
     &__inner {
         width: 100%;
         height: auto;
+        padding-top: 98px;
+        padding-bottom: 158px;
         position: relative;
-    }
-    &__name-small {
-        left: 25%;
-        top: -10px;
-        position: absolute;
-        @include small-name-stiyle;
-        transform: translate(-10%, 0);
-    }
-    &__name-big {
-        top: 72px;
-        left: 45%;
-        position: absolute;
-        @include big-name-stiyle;
-        transform: translate(-31%, 0);
     }
     &__title {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 34px;
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
         text-align: center;
-        letter-spacing: -0.02em;
-        color: $primary-color-1;
-        margin-bottom: 46px;
+        letter-spacing: 0.5em;
+        font-family: "Roboto";
+        margin-bottom: 76px;
     }
-    &__slider-box {
+    &__main {
         width: 100%;
-        height: auto;
     }
-    &__slider-list {
-        height: 590px;
-        @include flex-jc-between;
-        align-items: start !important;
-        :nth-child(2),
-        :nth-child(4) {
-            transform: translate(0, 186px);
-        }
-        :nth-child(3) {
-            transform: translate(0, 83px);
-        }
-    }
-    &__slider-item {
-        position: relative;
-        :nth-child(2),
-        :nth-child(3),
-        :nth-child(4) {
-            transform: translate(0, 0);
-        }
-    }
-    &__slider-item-img {
+    &__content {
         width: 100%;
-        height: 402px;
-        max-width: 282px;
-        margin-bottom: 26px;
+        height: 100%;
+        @include flex;
+        align-items: start;
+        margin-bottom: 126px;
+        background: rgba(34, 48, 85, 0.23);
+    }
+    &__content-left-img-box {
+        width: 100%;
+        height: 550px;
+        max-width: 590px;
+        margin-right: 132px;
+        background: $primary-color-5;
+        margin-top: 2px;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
-    &__slider-item-desc {
-        display: none;
-        div {
-            @include flex;
-        }
-        h4 {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 29px;
-            color: $primary-color-11;
-            margin-bottom: 20px;
-        }
-        button {
-            font-size: 10px;
-            font-weight: 400;
-            line-height: 12px;
-            @include flex-jc-center;
+    &__content-right {
+        width: 100%;
+        padding-top: 145px;
+    }
+    &__content-title-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-bottom: 98px;
+    }
+    &__content-right-categor {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        color: #223055;
+    }
+    &__content-right-title {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        color: $black;
+    }
 
-            color: $white;
-            border-radius: 3px;
-            background: $primary-color-7;
-            border: 1px solid $primary-color-7;
+    &__content-list {
+        width: 100%;
+    }
+    &__content-item {
+        width: 100%;
+        margin-bottom: 68px;
 
-            margin-right: 10px;
-            padding: 2px 8px;
+        &:nth-child(2) {
+            margin-bottom: 86px;
         }
+        &:nth-child(3) {
+            margin-bottom: 125px;
+        }
+    }
+    &__content-item-title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
+        font-family: "Roboto";
+        margin-bottom: 16px;
+    }
+    &__content-item-text {
+        color: $black;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        font-family: "Roboto";
+    }
+    &__items {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1005px;
+        position: relative;
+        margin-bottom: 116px;
+    }
+    &__items-list {
+        width: 100%;
+        @include flex-jc-between;
+        flex-wrap: wrap;
+    }
+    &__items-item {
+        width: 100%;
+        height: 206px;
+        max-width: 318px;
+        position: relative;
+        margin-bottom: 60px;
+        background: $primary-color-5;
+    }
+    &__items-img-box {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__items-desc {
+        left: 50%;
+        width: 100%;
+        bottom: -8px;
+        height: 78px;
+        max-width: 260px;
+        position: absolute;
+        padding: 10px 18px;
+        background: #fff;
+        transform: translate(-50%);
+        border: 1px solid #d0d0d0;
+    }
+    &__items-desc-title {
+        color: $black;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23px;
+        font-family: "Roboto";
+        margin-bottom: 10px;
+    }
+    &__items-desc-text {
+        color: $black;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 15px;
+        font-family: "Roboto";
+    }
+
+    &__facilities {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    &__facilities-title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
+        font-family: "Roboto";
+        margin-bottom: 36px;
+    }
+    &__facilities-list-box {
+        width: 100%;
+        margin-bottom: 68px;
+    }
+    &__facilities-list {
+        width: 100%;
+        @include flex;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    &__facilities-item {
+        width: 100%;
+        height: 270px;
+        margin: 0 5px;
+        max-width: 148px;
+        position: relative;
+        transition: all 0.4s ease;
+        cursor: pointer;
+        // &:hover {
+        //     max-width: 480px;
+        // }
+    }
+    &__facilities-item-img-box {
+        width: 100%;
+        height: 100%;
+        background: $primary-color-5;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__facilities-item-desc {
+        left: 0;
+        width: 100%;
+        bottom: 15px;
+        height: auto;
+        position: absolute;
+        z-index: 2;
         p {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 17px;
-            color: $primary-color-7;
-        }
-    }
-    &__slider {
-        display: none;
-    }
-}
-
-// MEDIA PART
-
-@media screen and (max-width: 1250px) {
-    .smTheatre {
-        &__title {
-            margin-bottom: 70px;
-        }
-        &__slider-list {
-            height: 538px !important;
-        }
-        &__slider-item {
-            width: 260px !important;
-        }
-        &__slider-item-img {
-            height: 360px !important;
-            max-width: 260px !important;
-        }
-    }
-}
-@media screen and (max-width: 1200px) {
-    .smTheatre {
-        padding-top: 180px;
-        padding-bottom: 240px;
-        &__name-small {
-            top: 30px;
-            font-size: 50px;
-        }
-        &__name-big {
-            top: 110px;
-            left: 50%;
-            font-size: 110px;
-            line-height: 140px;
-        }
-    }
-}
-@media screen and (max-width: 1170px) {
-    .smTheatre {
-        &__slider-list {
-            height: 528px !important;
-        }
-        &__slider-item {
-            width: 240px !important;
-        }
-        &__slider-item-img {
-            height: 350px !important;
-            max-width: 240px !important;
-        }
-    }
-}
-@media screen and (max-width: 1100px) {
-    .smTheatre {
-        &__name-small {
-            top: 30px;
-            font-size: 50px;
-        }
-        &__name-big {
-            top: 110px;
-            left: 50%;
-            font-size: 110px;
-            line-height: 140px;
-        }
-        &__slider-list {
-            height: 430px !important;
-            :nth-child(2),
-            :nth-child(4) {
-                transform: translate(0, 110px);
-            }
-            :nth-child(3) {
-                transform: translate(0, 60px);
-            }
-        }
-        &__slider-item {
-            width: 220px !important;
-        }
-        &__slider-item-img {
-            height: 320px !important;
-            max-width: 220px !important;
-        }
-    }
-}
-@media screen and (max-width: 990px) {
-    .smTheatre {
-        &__slider-list {
-            height: 410px !important;
-        }
-        &__slider-item {
-            width: 200px !important;
-        }
-        &__slider-item-img {
-            height: 300px !important;
-            max-width: 200px !important;
-        }
-    }
-}
-@media screen and (max-width: 900px) {
-    .smTheatre {
-        padding-top: 140px;
-        padding-bottom: 200px;
-        &__name-small {
-            top: 30px;
-            font-size: 50px;
-        }
-        &__name-big {
-            top: 110px;
-            left: 55%;
-            font-size: 90px;
-            line-height: 120px;
-        }
-        &__title {
-            margin-bottom: 65px;
-        }
-        &__slider-list {
-            height: 370px !important;
-        }
-        &__slider-item {
-            width: 180px !important;
-        }
-        &__slider-item-img {
-            height: 260px !important;
-            max-width: 180px !important;
-        }
-    }
-}
-@media screen and (max-width: 850px) {
-    .smTheatre {
-        &__slider-list {
-            height: 350px !important;
-        }
-        &__slider-item {
-            width: 170px !important;
-        }
-        &__slider-item-img {
-            height: 240px !important;
-            max-width: 170px !important;
-        }
-    }
-}
-@media screen and (max-width: 768px) {
-    .smTheatre {
-        padding-top: 120px;
-        padding-bottom: 188px;
-        &__name-small {
-            font-size: 40px;
-        }
-        &__name-big {
-            top: 100px;
-            left: 61%;
-            font-size: 80px;
-        }
-        &__title {
-            font-size: 18px;
-            line-height: 30px;
-            margin-bottom: 75px;
-        }
-        &__slider-list {
-            display: none;
-        }
-        &__slider-item-desc {
-            display: block;
-        }
-        &__slider {
-            display: block;
-        }
-        .slick-prev,
-        .slick-next {
-            display: none !important;
-        }
-        .slick-dots {
-            position: absolute;
-            bottom: -40px;
-            right: 0 !important;
-            display: flex !important;
-            justify-content: center;
-            z-index: 10;
-            .slick-active {
-                background: $primary-color-1;
-            }
-            li {
-                width: 10px;
-                height: 10px;
-                margin: 0 5px;
-                background: $primary-color-7;
-                border-radius: $db-radius-2;
-                button {
-                    &::before,
-                    ::after {
-                        display: none;
-                    }
-                }
-            }
-        }
-        .slick-slider {
-            width: 100%;
-            transition: all 0.3s ease;
-            width: 350px !important;
-            margin: 0 auto;
-        }
-        .slick-list {
-            width: 100%;
-            height: 570px;
-            transform: translate(-35%) !important;
-            overflow: visible !important;
-            :nth-child(even){
-                transform: translate(0, 120px);
-            }
-        }
-        &__slider-item {
-            position: relative;
-            width: 250px !important;
-            outline: none;
-            :nth-child(2),
-            :nth-child(3),
-            :nth-child(4) {
-                transform: translate(0, 0) !important;
-            }
-        }
-        &__slider-item-img {
-            max-width: 250px !important;
-            height: 356px !important;
-        }
-    }
-}
-@media screen and (max-width: 700px) {
-    .smTheatre {
-        padding-top: 100px;
-        padding-bottom: 230px;
-        &__name-small {
-            top: 60px;
-            left: 10%;
-            font-size: 35px;
-            line-height: 80px;
-        }
-        &__name-big {
-            top: 110px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            font-size: 70px;
-            line-height: 90px;
-        }
-        .slick-slider {
-            width: 280px !important;
-        }
-        .slick-list {
-            transform: translate(-45%) !important;
-            :nth-child(2),
-            :nth-child(4) {
-                transform: translate(0, 85px);
-            }
-        }
-        &__slider-item {
-            position: relative;
-            width: 250px !important;
-            transform: translate(0, 30px);
-        }
-        &__slider-item-img {
-            max-width: 250px !important;
-            height: 356px !important;
-        }
-        .slick-dots {
-            :nth-child(2),
-            :nth-child(4) {
-                display: block;
-            }
-        }
-    }
-}
-@media screen and (max-width: 576px) {
-    .smTheatre {
-        padding-top: 90px;
-        padding-bottom: 165px;
-        &__name-small {
-            top: 65px;
-            left: 12%;
-            font-size: 30px;
-            line-height: 60px;
-        }
-        &__name-big {
-            top: 100px;
-            font-size: 60px;
-            line-height: 84px;
-        }
-        &__title {
-            font-size: 16px;
-            line-height: 28px;
-            margin-bottom: 85px;
-        }
-        .slick-slider {
-            width: 250px !important;
-        }
-        .slick-list {
-            height: 475px !important;
-            transform: translate(-43%) !important;
-            :nth-child(2),
-            :nth-child(4) {
-                transform: translate(0, 60px);
-            }
-        }
-        &__slider-item {
-            width: 220px !important;
-            transform: translate(0, 30px);
-        }
-        &__slider-item-img {
-            max-width: 220px !important;
-            height: 310px !important;
-            margin-bottom: 15px;
-        }
-        &__slider-item-desc {
-            div {
-                @include flex;
-            }
-            h4 {
-                font-size: 20px;
-                line-height: 26px;
-                margin-bottom: 15px;
-            }
-            button {
-                font-size: 7px;
-            }
-            p {
-                font-size: 12px;
-            }
-        }
-    }
-}
-@media screen and (max-width: 450px) {
-    .smTheatre {
-        .slick-list {
-            height: 400px !important;
-            transform: translate(0) !important;
-            :nth-child(2),
-            :nth-child(4) {
-                transform: translate(0, 0px);
-            }
-        }
-        .slick-slider {
-            width: 100% !important;
-            max-width: 340px !important;
-            margin: 0 auto;
-        }
-        &__slider-item {
-            width: 100% !important;
-            max-width: 340px !important;
-            transform: translate(0, 20px);
+            color: $black;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 18px;
             text-align: center;
-            margin: 0 auto;
-            div {
-                width: 170px;
-                margin-left: auto;
-                margin-right: auto;
-            }
+            font-family: "Roboto";
         }
-        &__slider-item-img {
-            width: 170px !important;
-            max-width: 170px !important;
-            height: 242px !important;
-        }
-        &__slider-item-desc {
-            div {
-                @include flex-jc-center;
-            }
-        }
-        .slick-dots {
-            bottom: -27px;
-        }
+    }
+    &__facilities-spaceUses {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
+        font-family: "Roboto";
     }
 }
-@media screen and (max-width: 340px) {
-    .smTheatre {
-        padding-top: 87px;
-        padding-bottom: 195px;
-        &__name-small {
-            left: 15%;
-            font-size: 26px;
-            line-height: 34px;
-        }
-        &__name-big {
-            top: 90px;
-            font-size: 55px;
-            line-height: 68px;
-        }
-        &__title {
-            font-size: 14px;
-            line-height: 24px;
-            margin-bottom: 105px;
-        }
-        &__slider-item {
-            transform: translate(0, -10px);
-        }
-    }
+.facilActItem {
+    max-width: 480px;
+}
+.facilNoAct {
+    max-width: 148px;
 }

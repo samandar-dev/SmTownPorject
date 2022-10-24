@@ -12,12 +12,21 @@ import "./Navbar.scss"
 export default function Navbar(props) {
     const [age, setAge] = useState("STORE & INFO");
     const sidebarItems = [
-        "SMTOWN <br/> CHANGWON", "SMTOWN <br/> THEATRE", "SMTOWN <br/> MUSEUM",
-        "THE PLAY <br/> GROUND K-POP", "THE <br/> STAY K-POP", "NOTICE & <br/> EVENT"
+        { id: 1, name: "SMTOWN <br/> CHANGWON", path: "/about1" },
+        { id: 2, name: "SMTOWN <br/> THEATRE", path: "/theatre1" },
+        { id: 3, name: "SMTOWN <br/> MUSEUM", path: "/smmuseum" },
+        { id: 4, name: "THE PLAY <br/> GROUND K-POP", path: "/smplayground" },
+        { id: 5, name: "THE <br/> STAY K-POP", path: "/smstay" },
+        { id: 6, name: "NOTICE & <br/> EVENT", path: "/smnoticeevent" },
     ]
+
     const sidebarItemsTwo = [
-        "SMTOWN <br/> CHANGWON", "SMTOWN <br/> THEATRE", "SMTOWN <br/> MUSEUM",
-        "THE PLAY GROUND <br/> K-POP", "THE STAY <br/> K-POP", "NOTICE & <br/> EVENT"
+        { id: 1, name: "SMTOWN <br/> CHANGWON", path: "/about1" },
+        { id: 2, name: "SMTOWN <br/> THEATRE", path: "/smtheatre" },
+        { id: 3, name: "SMTOWN <br/> MUSEUM", path: "/smmuseum" },
+        { id: 4, name: "THE PLAY GROUND <br/> K-POP", path: "/smplayground" },
+        { id: 5, name: "THE STAY <br/> K-POP", path: "/smstay" },
+        { id: 6, name: "NOTICE & <br/> EVENT", path: "/smnoticeevent" },
     ]
 
     return (
@@ -43,15 +52,15 @@ export default function Navbar(props) {
                     <ul className="navbar__list navbar__left-list" style={{ maxWidth: `${props.col === 'white' ? '405px' : "384px"}` }}>
                         {
                             props.col === 'white'
-                                ? sidebarItems.map((item, inx) => inx + 1 <= 3 ?
-                                    <li className="navbar__item" key={inx + 1}>
-                                        <NavLink to={'/'}>{parse(item)}</NavLink>
+                                ? sidebarItems.map(item => item.id <= 3 ?
+                                    <li className="navbar__item" key={item.id}>
+                                        <NavLink to={item.path}>{parse(item.name)}</NavLink>
                                     </li>
                                     : ""
                                 )
-                                : sidebarItemsTwo.map((item, inx) => inx + 1 <= 3 ?
-                                    <li className="navbar__item" key={inx + 1} style={{ width: "100%", maxWidth: "127px", textAlign: "center" }}>
-                                        <NavLink to={'/'} style={{ color: '#000', textAlign: 'center', fontWeight: '400' }}>{parse(item)}</NavLink>
+                                : sidebarItemsTwo.map(item => item.id <= 3 ?
+                                    <li className="navbar__item" key={item.id} style={{ width: "100%", maxWidth: "127px", textAlign: "center" }}>
+                                        <NavLink to={item.path} style={{ color: '#000', textAlign: 'center', fontWeight: '400' }}>{parse(item.name)}</NavLink>
                                     </li>
                                     : ""
                                 )
@@ -73,15 +82,15 @@ export default function Navbar(props) {
                     <ul className="navbar__list navbar__left-list" style={{ maxWidth: `${props.col === 'white' ? '405px' : "384px"}` }}>
                         {
                             props.col === 'white'
-                                ? sidebarItems.map((item, inx) => inx + 1 > 3 ?
-                                    <li className="navbar__item" key={inx + 1}>
-                                        <NavLink to={'/'}>{parse(item)}</NavLink>
+                                ? sidebarItems.map(item => item.id > 3 ?
+                                    <li className="navbar__item" key={item.id}>
+                                        <NavLink to={item.path}>{parse(item.name)}</NavLink>
                                     </li>
                                     : ""
                                 )
-                                : sidebarItemsTwo.map((item, inx) => inx + 1 > 3 ?
-                                    <li className="navbar__item" key={inx + 1} style={{ width: "100%", maxWidth: "127px", textAlign: "center" }}>
-                                        <NavLink to={'/'} style={{ color: '#000', textAlign: 'center', fontWeight: '400' }}>{parse(item)}</NavLink>
+                                : sidebarItemsTwo.map(item => item.id > 3 ?
+                                    <li className="navbar__item navbar__item-black" key={item.id} style={{ width: "100%", maxWidth: "127px", textAlign: "center" }}>
+                                        <NavLink to={item.path} style={{ color: '#000', textAlign: 'center', fontWeight: '400' }}>{parse(item.name)}</NavLink>
                                     </li>
                                     : ""
                                 )
@@ -95,6 +104,6 @@ export default function Navbar(props) {
                     </div>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
