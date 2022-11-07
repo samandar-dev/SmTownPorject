@@ -30,50 +30,52 @@ export default function SmTheatre() {
 
                     <div className="thea-page__main">
                         <div className="thea-page__content">
-                            <div className="thea-page__content-left-img-box">
-                                <img src="https://picsum.photos/590/550" alt="" />
-                            </div>
-
-                            <div className="thea-page__content-right">
-                                <div className="thea-page__content-title-box">
-                                    <p className='thea-page__content-right-categor'>Theatres</p>
-
-                                    <h4 className="thea-page__content-right-title">
-                                        SM만의 독자적인 뉴미디어 콘텐츠를 메인으로 <br />
-                                        콘서트, 뮤지컬 등 고퀄리티 공연이 이루어지는 공간
-                                    </h4>
+                            <div className="thea-page__main-info">
+                                <div className="thea-page__content-left-img-box">
+                                    <img src="https://picsum.photos/590/550" alt="" />
                                 </div>
 
-                                <ul className="thea-page__content-list">
-                                    <li className="thea-page__content-item">
-                                        <h4 className='thea-page__content-item-title'>New Media Interaction </h4>
+                                <div className="thea-page__content-right">
+                                    <div className="thea-page__content-title-box">
+                                        <p className='thea-page__content-right-categor'>Theatres</p>
 
-                                        <p className="thea-page__content-item-text">
-                                            전용 홀로그램, 서라운드뷰잉, 인터랙티브 등 <br />
-                                            뉴미디어 콘텐츠와 다양한 전문시스템을 가진 <br />
-                                            단 하나의 공연장
-                                        </p>
-                                    </li>
-                                    <li className="thea-page__content-item">
-                                        <h4 className='thea-page__content-item-title'>Transform Utility </h4>
+                                        <h4 className="thea-page__content-right-title">
+                                            SM만의 독자적인 뉴미디어 콘텐츠를 메인으로 <br />
+                                            콘서트, 뮤지컬 등 고퀄리티 공연이 이루어지는 공간
+                                        </h4>
+                                    </div>
 
-                                        <p className="thea-page__content-item-text">
-                                            뉴미디어, 스탠딩콘서트, 전문 무대공연, 전문 음악공연, 전시 등 <br />
-                                            콘텐츠 및 사용 용도에 따른 무대장치, 파사드 스크린, 객석의 <br />
-                                            가변으로 유용하고 다양한 변형이 가능한 멀티 퍼포스
-                                        </p>
-                                    </li>
-                                    <li className="thea-page__content-item">
-                                        <h4 className='thea-page__content-item-title'>'Only one' system </h4>
+                                    <ul className="thea-page__content-list">
+                                        <li className="thea-page__content-item">
+                                            <h4 className='thea-page__content-item-title'>New Media Interaction </h4>
 
-                                        <p className="thea-page__content-item-text">
-                                            관객을 270도 둘러싸는 40m의 초대형 파사드 서라운드뷰 <br />
-                                            이머시브, 잔향가변, 음상일치, 멀티트랙 플레이백 기능을 <br />
-                                            가진 3D 입체음향 시스템 <br />
-                                            4K 4만 ANSI부터 2만 ANSI까지 11대의 DLP를 활용한 초고화질 영상 <br />
-                                        </p>
-                                    </li>
-                                </ul>
+                                            <p className="thea-page__content-item-text">
+                                                전용 홀로그램, 서라운드뷰잉, 인터랙티브 등 <br />
+                                                뉴미디어 콘텐츠와 다양한 전문시스템을 가진 <br />
+                                                단 하나의 공연장
+                                            </p>
+                                        </li>
+                                        <li className="thea-page__content-item">
+                                            <h4 className='thea-page__content-item-title'>Transform Utility </h4>
+
+                                            <p className="thea-page__content-item-text">
+                                                뉴미디어, 스탠딩콘서트, 전문 무대공연, 전문 음악공연, 전시 등 <br />
+                                                콘텐츠 및 사용 용도에 따른 무대장치, 파사드 스크린, 객석의 <br />
+                                                가변으로 유용하고 다양한 변형이 가능한 멀티 퍼포스
+                                            </p>
+                                        </li>
+                                        <li className="thea-page__content-item">
+                                            <h4 className='thea-page__content-item-title'>'Only one' system </h4>
+
+                                            <p className="thea-page__content-item-text">
+                                                관객을 270도 둘러싸는 40m의 초대형 파사드 서라운드뷰 <br />
+                                                이머시브, 잔향가변, 음상일치, 멀티트랙 플레이백 기능을 <br />
+                                                가진 3D 입체음향 시스템 <br />
+                                                4K 4만 ANSI부터 2만 ANSI까지 11대의 DLP를 활용한 초고화질 영상 <br />
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -96,28 +98,30 @@ export default function SmTheatre() {
                     </div>
 
                     <div className="thea-page__facilities">
-                        <button className="thea-page__facilities-title">Facilities</button>
+                        <div className="thea-page__facilties-info">
+                            <button className="thea-page__facilities-title">Facilities</button>
 
-                        <div className="thea-page__facilities-list-box">
-                            <ul className="thea-page__facilities-list">
-                                {smtheaitems.map(item => (
-                                    <li
-                                        className={`thea-page__facilities-item ${facilActiveitem === item.id ? "facilActItem" : "facilNoAct"}`}
-                                        key={item.id} onMouseMove={() => setFacilActiveItem(item.id)}
-                                    >
-                                        <div className="thea-page__facilities-item-img-box">
-                                            <img src="https://picsum.photos/480/270" alt="" />
-                                        </div>
+                            <div className="thea-page__facilities-list-box">
+                                <ul className="thea-page__facilities-list">
+                                    {smtheaitems.map(item => (
+                                        <li
+                                            className={`thea-page__facilities-item ${facilActiveitem === item.id ? "facilActItem" : "facilNoAct"}`}
+                                            key={item.id} onMouseMove={() => setFacilActiveItem(item.id)}
+                                        >
+                                            <div className="thea-page__facilities-item-img-box">
+                                                <img src="https://picsum.photos/480/270" alt="" />
+                                            </div>
 
-                                        <div className="thea-page__facilities-item-desc">
-                                            <p>{item.title}</p>
-                                        </div>
-                                    </li>
-                                ))}
-                            </ul>
+                                            <div className="thea-page__facilities-item-desc">
+                                                <p>{item.title}</p>
+                                            </div>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            <button className='thea-page__facilities-spaceUses'>Space uses</button>
                         </div>
-
-                        <button className='thea-page__facilities-spaceUses'>Space uses</button>
                     </div>
                 </div>
             </div>

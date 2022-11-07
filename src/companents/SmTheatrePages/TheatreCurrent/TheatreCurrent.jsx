@@ -5,7 +5,7 @@ import "./TheatreCurrent.scss";
 
 export default function TheatreCurrent(props) {
     const [sliderAct, setSliderAct] = useState(1)
-    const [categor, setCategor] = useState('all')
+    const [categor, setCategor] = useState('전체')
     const [categorBtnAct, setCategorBtnAct] = useState(1)
 
     const sliderItems = [
@@ -97,7 +97,6 @@ export default function TheatreCurrent(props) {
                                     <li className="thea-current__slider-item" key={item.id}>
                                         <div className="thea-current__slider-title-box">
                                             <p className="thea-current__slider-item-title"><span>{item.data}</span>  <br />  {item.title}</p>
-                                            {/* <p className="thea-current__slider-title-number">{item.title}</p> */}
                                         </div>
 
                                         <div className="thea-current__slider-main">
@@ -125,8 +124,8 @@ export default function TheatreCurrent(props) {
                         <div className="thea-current__main-categor-box">
                             <ul className="thea-current__main-categor-list">
                                 {props.mainItems.map(item => (
-                                    <li className={`thea-current__main-categor-item ${item.id === categorBtnAct ? "categorAct" : ""}`} key={item.id}>
-                                        <button className='thea-current__main-categor-name' onClick={() => (setCategor(item.categor), setCategorBtnAct(item.id))}>{item.categor}</button>
+                                    <li className="thea-current__main-categor-item" key={item.id}>
+                                        <button className={`thea-current__main-categor-btn ${item.id === categorBtnAct ? "categorAct" : ""}`} onClick={() => (setCategor(item.categor), setCategorBtnAct(item.id))}>{item.categor}</button>
                                     </li>
                                 ))}
                             </ul>
@@ -135,41 +134,78 @@ export default function TheatreCurrent(props) {
                         <div className="thea-current__main-content">
                             <ul className="thea-current__main-content-list">
                                 {props.mainItems.map(item => (
-                                    <li className="thea-current__main-content-item" key={item.id}>
-                                        <div className="thea-current__main-content-item-img-box">
-                                            {/* <img src="/" alt="" /> */}
-                                        </div>
-
-                                        <div className="thea-current__main-content-item-desc">
-                                            <button className="thea-current__main-content-item-categor">{item.categor}</button>
-
-                                            <h4 className="thea-current__main-content-item-title">{item.title}</h4>
-
-                                            <ul className="thea-current__main-content-item-list">
-                                                {item.items.map(itemCon => (
-                                                    <li className="thea-current__main-content-item-item" key={itemCon.itemsId}>
-                                                        <div>
-                                                            <p>{itemCon.name}</p>
-                                                        </div>
-                                                        <div>
-                                                            <p>{itemCon.value}</p>
-                                                        </div>
-                                                    </li>
-                                                ))}
-                                            </ul>
-
-                                            <div className="thea-current__main-content-item-text">
-                                                <p>{item.text}</p>
+                                    item.categor === categor ?
+                                        <li className="thea-current__main-content-item" key={item.id}>
+                                            <div className="thea-current__main-content-item-img-box">
+                                                {/* <img src="/" alt="" /> */}
                                             </div>
 
-                                            <div className="thea-current__main-content-item-btns">
-                                                <Link to={`/theatre3/${item.id}`}>
-                                                    <button className="thea-current__main-content-item-btn">상세보기</button>
-                                                </Link>
-                                                <button className="thea-current__main-content-item-btn">예매하기</button>
+                                            <div className="thea-current__main-content-item-desc">
+                                                <button className="thea-current__main-content-item-categor">{item.categor}</button>
+
+                                                <h4 className="thea-current__main-content-item-title">{item.title}</h4>
+
+                                                <ul className="thea-current__main-content-item-list">
+                                                    {item.items.map(itemCon => (
+                                                        <li className="thea-current__main-content-item-item" key={itemCon.itemsId}>
+                                                            <div>
+                                                                <p>{itemCon.name}</p>
+                                                            </div>
+                                                            <div>
+                                                                <p>{itemCon.value}</p>
+                                                            </div>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+
+                                                <div className="thea-current__main-content-item-text">
+                                                    <p>{item.text}</p>
+                                                </div>
+
+                                                <div className="thea-current__main-content-item-btns">
+                                                    <Link to={`/theatre3/${item.id}`}>
+                                                        <button className="thea-current__main-content-item-btn">상세보기</button>
+                                                    </Link>
+                                                    <button className="thea-current__main-content-item-btn">예매하기</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
+                                        </li> :
+                                        categor === '전체' ?
+                                            <li className="thea-current__main-content-item" key={item.id}>
+                                                <div className="thea-current__main-content-item-img-box">
+                                                    {/* <img src="/" alt="" /> */}
+                                                </div>
+
+                                                <div className="thea-current__main-content-item-desc">
+                                                    <button className="thea-current__main-content-item-categor">{item.categor}</button>
+
+                                                    <h4 className="thea-current__main-content-item-title">{item.title}</h4>
+
+                                                    <ul className="thea-current__main-content-item-list">
+                                                        {item.items.map(itemCon => (
+                                                            <li className="thea-current__main-content-item-item" key={itemCon.itemsId}>
+                                                                <div>
+                                                                    <p>{itemCon.name}</p>
+                                                                </div>
+                                                                <div>
+                                                                    <p>{itemCon.value}</p>
+                                                                </div>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+
+                                                    <div className="thea-current__main-content-item-text">
+                                                        <p>{item.text}</p>
+                                                    </div>
+
+                                                    <div className="thea-current__main-content-item-btns">
+                                                        <Link to={`/theatre3/${item.id}`}>
+                                                            <button className="thea-current__main-content-item-btn">상세보기</button>
+                                                        </Link>
+                                                        <button className="thea-current__main-content-item-btn">예매하기</button>
+                                                    </div>
+                                                </div>
+                                            </li> : ""
                                 ))}
                             </ul>
                         </div>

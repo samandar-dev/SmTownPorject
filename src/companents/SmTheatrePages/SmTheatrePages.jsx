@@ -72,7 +72,7 @@ export default function SmTheatrePages() {
             {
                 location.pathname === '/theatre1' ? <SmTheatre /> :
                     location.pathname === '/theatre2' ? <TheatreCurrent mainItems={mainItems} /> :
-                        location.pathname === '/theatre3/:id' ? <TheatreCurrentItem mainItems={mainItems} /> : ""
+                        location.pathname === `/theatre3/${+location.pathname.split('').at(-1)}` ? <TheatreCurrentItem mainItems={mainItems} /> : ""
             }
             <Footer col="balck" />
         </>

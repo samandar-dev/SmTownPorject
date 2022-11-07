@@ -1,0 +1,134 @@
+@import "../../../App.scss";
+
+.museum {
+    width: 100%;
+    height: auto;
+    position: relative;
+    &__inner {
+        width: 100%;
+        padding-top: 98px;
+        padding-bottom: 230px;
+    }
+    &__title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 0.5em;
+        font-family: "Roboto";
+        margin-bottom: 78px;
+    }
+    &__hero {
+        width: 100%;
+        height: 418px;
+        position: relative;
+        margin-bottom: 78px;
+        background: $primary-color-5;
+    }
+    &__hero-info {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        max-width: 1440px;
+        position: relative;
+    }
+    &__hero-desc {
+        left: 78px;
+        bottom: 78px;
+        position: absolute;
+    }
+    &__hero-desc-tit {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        font-family: "Roboto";
+        color: $primary-color-1;
+        margin-bottom: 10px;
+    }
+    &__hero-desc-title {
+        color: $black;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 23px;
+        font-family: "Roboto";
+    }
+    &__main {
+        width: 100%;
+        height: auto;
+    }
+    &__main-info {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1135px;
+    }
+    &__main-title-box {
+        width: 100%;
+        margin-bottom: 150px;
+    }
+    &__main-hands-on-type {
+        color: $black;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        font-family: "Roboto";
+        margin-bottom: 40px;
+    }
+    &__main-item-title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
+        font-family: "Roboto";
+    }
+    &__main-items-box {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    &__main-list {
+        width: 100%;
+        height: auto;
+        :nth-child(even) {
+            flex-direction: row-reverse;
+            .museum__main-item-img-box {
+                margin-left: 245px;
+                margin-right: 0;
+            }
+        }
+    }
+    &__main-item {
+        width: 100%;
+        margin-bottom: 105px;
+        @include flex;
+    }
+    &__main-item-img-box {
+        width: 100%;
+        height: 228px;
+        max-width: 606px;
+        background: $primary-color-5;
+        margin-right: 116px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__main-item-title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
+        font-family: "Roboto";
+        margin-bottom: 15px;
+    }
+    &__main-item-text {
+        color: $black;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        font-family: "Roboto";
+    }
+}

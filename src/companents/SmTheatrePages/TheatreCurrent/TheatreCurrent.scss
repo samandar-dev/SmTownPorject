@@ -10,8 +10,8 @@
         padding: 0 20px;
         max-width: 1240px;
         position: relative;
-        padding-top: 98px;
         padding-bottom: 256px;
+        padding-top: 98px;
     }
     &__title {
         color: $black;
@@ -30,8 +30,8 @@
         max-width: 964px;
         position: relative;
         @include flex-jc-between;
-        overflow: hidden;
         margin-bottom: 94px;
+        overflow: hidden;
     }
     &__slider-box {
         width: 100%;
@@ -92,8 +92,6 @@
     &__slider-main {
         padding: 30px 8px;
     }
-    &__slider-main-list {
-    }
     &__slider-main-item {
         @include flex;
         align-items: start;
@@ -120,19 +118,33 @@
         margin-bottom: 90px;
     }
     &__main-categor-list {
+        position: relative;
         width: 100%;
         height: auto;
+        min-width: 150px;
         @include flex;
     }
-    &__main-categor-name {
+    &__main-categor-btn {
+        position: relative;
         font-size: 15px;
         font-weight: 500;
         line-height: 18px;
         text-align: center;
         font-family: "Roboto";
+
         color: #878787;
-        padding: 0 25px;
-        padding-bottom: 10px;
+        padding: 12px 27px;
+        &::before {
+            content: "";
+            bottom: 0;
+            left: 50%;
+            width: 0%;
+            height: 5px;
+            position: absolute;
+            background: #fbe1e9;
+            transition: all 0.3s ease;
+            transform: translate(-50%);
+        }
     }
     &__main-content {
         width: 100%;
@@ -143,8 +155,15 @@
         align-items: start;
         margin-bottom: 78px;
         transition: all 0.3s ease;
-        // transform: translate(0, 20px);
-        // opacity: 0;
+        transform: translateY(20px);
+        animation: animItem 0.5s both ease;
+        opacity: 0;
+    }
+    @keyframes animItem {
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
     &__main-content-item-img-box {
         width: 100%;
@@ -240,11 +259,8 @@
 }
 .categorAct {
     color: $black;
-    button {
-        color: $black;
-        font-size: 18px;
-        line-height: 21px;
-        border-bottom: 5px solid #fbe1e9;
+    &::before {
+        width: 100%;
     }
 }
 .categorItems {

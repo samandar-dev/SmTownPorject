@@ -14,7 +14,7 @@ export default function TheatreCurrentItem(props) {
         { id: 3, name: '취소/환불안내' },
     ]
 
-    console.log(location.pathname.split('').at(-1));
+    console.log(+location.pathname.split('').at(-1));
 
     return (
         <>
@@ -33,58 +33,27 @@ export default function TheatreCurrentItem(props) {
                                             </div>
 
                                             <div className="thea-item__hero-desc">
-                                                <button className="thea-item__hero-desc-categor">SV (Surround Viewing)</button>
+                                                <button className="thea-item__hero-desc-categor">{item.categor}</button>
 
-                                                <h4 className="thea-item__hero-desc-title">[SV] EXO PLANET #5 - ExplOration - </h4>
+                                                <h4 className="thea-item__hero-desc-title">{item.title}</h4>
 
                                                 <ul className="thea-item__hero-desc-list">
-                                                    <li className="thea-item__hero-desc-item">
-                                                        <div>
-                                                            <p>출연자</p>
-                                                        </div>
-                                                        <div>
-                                                            <p>EXO</p>
-                                                        </div>
-                                                    </li>
-                                                    <li className="thea-item__hero-desc-item">
-                                                        <div>
-                                                            <p>공연일자</p>
-                                                        </div>
-                                                        <div>
-                                                            <p>2019.11.23 ~ </p>
-                                                        </div>
-                                                    </li>
-                                                    <li className="thea-item__hero-desc-item">
-                                                        <div>
-                                                            <p>관람등급</p>
-                                                        </div>
-                                                        <div>
-                                                            <p>8세 이상 관람가</p>
-                                                        </div>
-                                                    </li>
-                                                    <li className="thea-item__hero-desc-item">
-                                                        <div>
-                                                            <p>상영시간</p>
-                                                        </div>
-                                                        <div>
-                                                            <p>133분</p>
-                                                        </div>
-                                                    </li>
-                                                    <li className="thea-item__hero-desc-item">
-                                                        <div>
-                                                            <p>티켓가격</p>
-                                                        </div>
-                                                        <div>
-                                                            <p>19,000원</p>
-                                                        </div>
-                                                    </li>
+                                                    {item.items.map(child => (
+                                                        <li className="thea-item__hero-desc-item" key={child.itemId}>
+                                                            <div>
+                                                                <p>{child.name}</p>
+                                                            </div>
+                                                            <div>
+                                                                <p>{child.value}</p>
+                                                            </div>
+                                                        </li>
+                                                    ))}
                                                 </ul>
 
                                                 <button className="thea-item__hero-desc-btn">예매하기</button>
                                             </div>
                                         </div>
                                     </div>
-
 
                                     <div className="thea-item__info">
                                         <ul className="thea-item__info-top-list">
@@ -98,7 +67,6 @@ export default function TheatreCurrentItem(props) {
                                                 </li>
                                             ))}
                                         </ul>
-
                                         {
                                             infoitemAct === 1 ?
                                                 <TheatreBasicInfor /> :
@@ -112,8 +80,6 @@ export default function TheatreCurrentItem(props) {
                                 : ""
                         ))
                     }
-
-
                 </div>
             </div>
         </>

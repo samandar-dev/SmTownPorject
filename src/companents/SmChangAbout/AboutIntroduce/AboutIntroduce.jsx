@@ -1,10 +1,6 @@
 import React from 'react';
-import Navbar from '../../Navbar/Navbar';
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import "./AboutIntroduce.scss";
-import Footer from '../../Footer/Footer';
-import AboutNav from '../AboutNav/AboutNav';
 
 export default function AboutIntroduce() {
   const { t } = useTranslation()
@@ -13,8 +9,6 @@ export default function AboutIntroduce() {
     <>
       <div className='about-introduce'>
         <div className="about-introduce__inner">
-          <AboutNav />
-
           <div className="about-introduce__hero">
             <div className="about-introduce__hero-desc">
               <h3 className="about-introduce__title">ABOUT</h3>

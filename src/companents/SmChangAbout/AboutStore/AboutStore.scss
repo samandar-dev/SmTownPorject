@@ -39,15 +39,6 @@
     transition: all 0.5s ease;
     overflow: hidden;
     cursor: pointer;
-    &:nth-child(2) {
-      .ab-infor-two__img-box {
-        opacity: 0;
-      }
-      .ab-infor-two__desc {
-        top: 50%;
-        opacity: 1;
-      }
-    }
     &:hover {
       .ab-infor-two__img-box {
         opacity: 0;
