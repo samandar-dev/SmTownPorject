@@ -23,20 +23,21 @@ export default function SmStayItems({ setViewModalAct, setViewItem, item }) {
                   <div className="smStay__item-desc">
                     <ul className="smStay__item-desc-list">
                       {item.info.map(slidDesc => (
-                        <li className="smStay__item-desc-item" key={slidDesc.infoID}>
-                          <h4 className={`smStay__item-desc-title ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}>{infoItem.infoTitle}</h4>
+                        slidDesc.infoID === infoItem.infoID ?
+                          <li className="smStay__item-desc-item" key={slidDesc.infoID}>
+                            <h4 className={`smStay__item-desc-title ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}>{infoItem.infoTitle}</h4>
 
-                          <div className={`smStay__item-desc-line ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}>
-                            <span></span>
-                          </div>
+                            <div className={`smStay__item-desc-line ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}>
+                              <span></span>
+                            </div>
 
-                          <button
-                            className={`smStay__item-desc-btn ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}
-                            onClick={() => (setViewItem({ parentID: item.id, chiledID: infoItem.infoID }, setViewModalAct(true)))}
-                          >
-                            view
-                          </button>
-                        </li>
+                            <button
+                              className={`smStay__item-desc-btn ${slidDesc.infoID === infoItem.infoID ? "d-block" : ""}`}
+                              onClick={() => (setViewItem({ parentID: item.id, chiledID: infoItem.infoID }, setViewModalAct(true)))}
+                            >
+                              view
+                            </button>
+                          </li> : ""
                       ))}
                     </ul>
                   </div>

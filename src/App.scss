@@ -8,6 +8,7 @@
 @import "./src/assets/scssVerables/scssVeriables.scss";
 
 /* ====================================== */
+
 *,
 ::after,
 ::before {
@@ -16,7 +17,7 @@
   box-sizing: border-box;
   font-family: "SMTOWN(OTF)";
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -46,8 +47,6 @@ p {
 .app {
   width: 100%;
   height: 100vh;
-  // margin: 0 auto;
-  // max-width: 1920px;
 }
 .container {
   width: 100%;
