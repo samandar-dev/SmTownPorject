@@ -7,18 +7,20 @@ import ScrollTop from "./companents/ScrollTop/ScrollTop";
 import SmTownHome from './companents/SmTownHome/SmTownHome';
 import SmMuseumPage from './companents/SmMuseum/SmMuseumPages';
 import SmChangAbout from './companents/SmChangAbout/SmChangAbout';
+import SmPlayground from './companents/SmPlayground/SmPlayground';
 import SmTheatrePages from './companents/SmTheatrePages/SmTheatrePages';
 import './App.scss';
+import SmStay from './companents/SmStay/SmStay';
 
 function App() {
   const { t } = useTranslation()
-  const [welcomeActive, setWelcomeActive] = useState(false)
+  const [welcomeActive, setWelcomeActive] = useState(true)
 
-  useEffect(() => {
-    setTimeout(() => {
-      setWelcomeActive(true)
-    }, 4000)
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setWelcomeActive(true)
+  //   }, 4000)
+  // }, []);
 
   return (
     <>
@@ -37,6 +39,10 @@ function App() {
             <Route path='/theatre3/:id' element={<SmTheatrePages />} />
             <Route path='/museum1' element={<SmMuseumPage />} />
             <Route path='/museum2' element={<SmMuseumPage />} />
+            <Route path='/playground1' element={<SmPlayground />} />
+            <Route path='/playground2' element={<SmPlayground />} />
+            <Route path='/playground3' element={<SmPlayground />} />
+            <Route path='/smstay1' element={<SmStay />} />
             <Route path='/*' element={<NotFound />} />
           </Routes>
           : <Welcome title={t("welcome-title")} />}

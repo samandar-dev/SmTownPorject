@@ -15,8 +15,8 @@ export default function Navbar(props) {
         { id: 1, name: "SMTOWN <br/> CHANGWON", path: "/about1" },
         { id: 2, name: "SMTOWN <br/> THEATRE", path: "/theatre1" },
         { id: 3, name: "SMTOWN <br/> MUSEUM", path: "/museum1" },
-        { id: 4, name: "THE PLAY <br/> GROUND K-POP", path: "/museum1" },
-        { id: 5, name: "THE <br/> STAY K-POP", path: "/smstay" },
+        { id: 4, name: "THE PLAY <br/> GROUND K-POP", path: "/playground1" },
+        { id: 5, name: "THE <br/> STAY K-POP", path: "/smstay1" },
         { id: 6, name: "NOTICE & <br/> EVENT", path: "/smnoticeevent" },
     ]
 
@@ -24,8 +24,8 @@ export default function Navbar(props) {
         { id: 1, name: "SMTOWN <br/> CHANGWON", path: "/about1" },
         { id: 2, name: "SMTOWN <br/> THEATRE", path: "/theatre1" },
         { id: 3, name: "SMTOWN <br/> MUSEUM", path: "/museum1" },
-        { id: 4, name: "THE PLAY GROUND <br/> K-POP", path: "/museum1" },
-        { id: 5, name: "THE STAY <br/> K-POP", path: "/smstay" },
+        { id: 4, name: "THE PLAY GROUND <br/> K-POP", path: "/playground1" },
+        { id: 5, name: "THE STAY <br/> K-POP", path: "/smstay1" },
         { id: 6, name: "NOTICE & <br/> EVENT", path: "/smnoticeevent" },
     ]
 

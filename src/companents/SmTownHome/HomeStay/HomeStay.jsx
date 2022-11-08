@@ -10,7 +10,7 @@ import SmStayItems from './StayItems/StayItems';
 import ViewModal from './ViewModal/ViewModal'
 import "./HomeStay.scss"
 
-export default function SmStay() {
+export default function HomeStay() {
     const [stayItemActive, setStayItemActive] = useState(1)
     const [viewModalAct, setViewModalAct] = useState(false)
     const [viewItem, setViewItem] = useState({ parentID: 1, chiledID: 1 })

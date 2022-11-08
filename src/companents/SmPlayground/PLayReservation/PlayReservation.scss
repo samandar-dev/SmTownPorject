@@ -1,0 +1,176 @@
+@import "../../../App.scss";
+
+.playReser {
+    width: 100%;
+    height: 100%;
+    padding-top: 140px;
+    padding-bottom: 188px;
+    position: relative;
+
+    &__inner {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0 25px;
+        max-width: 1250px;
+    }
+    &__title {
+        color: $black;
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 53px;
+        letter-spacing: 0.5em;
+        font-family: "Roboto";
+        margin-bottom: 74px;
+    }
+    &__main {
+        width: 100%;
+        height: auto;
+        @include flex;
+        align-items: start;
+    }
+    &__left {
+        width: auto;
+        height: auto;
+        position: relative;
+        margin-right: 64px;
+    }
+    &__left-box {
+        width: auto;
+        margin-bottom: 50px;
+        h4 {
+            color: $black;
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 33px;
+            font-family: "Roboto";
+            margin-bottom: 20px;
+        }
+    }
+    &__left-item {
+        width: 188px;
+        cursor: pointer;
+        padding: 10px 14px;
+        background: transparent;
+        p {
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 29px;
+            font-family: "Roboto";
+            color: $primary-color-14;
+        }
+    }
+    &__right-categor-list {
+        width: 100%;
+        @include flex;
+        margin-bottom: 60px;
+    }
+    &__right-categor-item {
+        margin-right: 68px;
+        padding-bottom: 8px;
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        p {
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 33px;
+            font-family: "Roboto";
+            color: $primary-color-14;
+        }
+    }
+    &__right-tickets-list {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    &__right-tickets-item {
+        height: 220px;
+        margin-bottom: 70px;
+        transition: all 0.3s ease;
+    }
+    &__right-tickets-title {
+        color: $black;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 27px;
+        font-family: "Roboto";
+        margin-bottom: 18px;
+    }
+    &__right-tickets-item-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    &__right-tickets-item-list {
+        background: #f2f2f2;
+        border: 1px solid #878787;
+        @include flex-jc-between;
+    }
+    &__right-tickets-item-chiled,
+    &__right-tickets-item-main-chiled {
+        width: 176px;
+        height: 100%;
+        padding: 15px 0;
+        text-align: center;
+        border-left: 1px solid #878787;
+        p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 23px;
+            line-height: 27px;
+            text-align: center;
+            color: #000000;
+        }
+        span {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: center;
+            text-decoration-line: underline;
+            color: #8a8a8a;
+        }
+        &:nth-child(1) {
+            border-left: none;
+        }
+        &:nth-child(2) {
+            width: 324px;
+        }
+        &:nth-child(3) {
+            width: 254px;
+        }
+        &:nth-child(4) {
+            width: 186px;
+        }
+    }
+    &__right-tickets-item-main-list {
+        border: 1px solid #878787;
+        border-top: none;
+        @include flex-jc-between;
+    }
+    &__right-tickets-item-main-chiled {
+        height: 118px;
+        @include flex-jc-center;
+    }
+}
+.purchaseAct {
+    background: $black;
+    p {
+        color: $white;
+    }
+}
+.categorAct {
+    border-bottom: 3px solid $black;
+    p {
+        color: $black;
+    }
+}
+.d-none {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    overflow: hidden;
+}
