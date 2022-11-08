@@ -12,7 +12,7 @@ import './App.scss';
 
 function App() {
   const { t } = useTranslation()
-  const [welcomeActive, setWelcomeActive] = useState(true)
+  const [welcomeActive, setWelcomeActive] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
