@@ -37,6 +37,8 @@
         position: relative;
         width: 100%;
         z-index: 5;
+        margin: 0 auto;
+        max-width: 1920px;
     }
     &__slider-list {
         flex-wrap: wrap;

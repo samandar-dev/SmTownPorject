@@ -39,11 +39,11 @@ export default function PlayReservation() {
 
                         <div className="playReser__right">
                             <ul className="playReser__right-categor-list">
-                                <li className={`playReser__right-categor-item ${categorAct === 1 ? "categorAct" : ""}`}
+                                <li className={`playReser__right-categor-item ${categorAct === 1 ? "playReserCategorAct" : ""}`}
                                     onClick={() => setCategorAct(1)}>
                                     <p>PLAYGROUND(1)</p>
                                 </li>
-                                <li className={`playReser__right-categor-item ${categorAct === 2 ? "categorAct" : ""}`}
+                                <li className={`playReser__right-categor-item ${categorAct === 2 ? "playReserCategorAct" : ""}`}
                                     onClick={() => setCategorAct(2)}>
                                     <p>STAY(2)</p>
                                 </li>
