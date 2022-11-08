@@ -3,6 +3,8 @@
 .smStay {
     position: relative;
     width: 100%;
+    margin: 0 auto;
+    max-width: 1920px;
     &__name-big {
         position: absolute;
         top: 353px;
