@@ -1,0 +1,84 @@
+@import "../../../../App.scss";
+
+.pOnlineModal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    height: 100vh;
+    position: fixed;
+    @include flex-jc-center;
+    z-index: -100;
+    opacity: 0;
+
+    &__inner {
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        z-index: 400;
+        height: 820px;
+        max-width: 820px;
+        position: absolute;
+        background: $white;
+        padding: 48px 56px 50px;
+        transform: translate(-50%, -50%);
+    }
+    &__backdrop {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 250;
+        position: relative;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    &__title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 500;
+        line-height: 29px;
+        font-family: "Roboto";
+        margin-bottom: 32px;
+    }
+    &__media {
+        width: 100%;
+        height: 406px;
+        overflow: hidden;
+        margin-bottom: 65px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__select-btn-box {
+        width: 100%;
+        @include flex-jc-between;
+    }
+    &__select {
+        width: 100%;
+        outline: none;
+        max-width: 546px;
+    }
+    &__select-btn {
+        color: $white;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 27px;
+        text-align: center;
+        font-family: "Roboto";
+        transition: all 0.2s ease;
+        background: $primary-color-1;
+        border: 1px solid $primary-color-1;
+        padding: 12px 46px;
+        &:hover {
+            color: $primary-color-1;
+            background: transparent;
+        }
+    }
+}
+
+.d-block {
+    opacity: 1;
+    z-index: 500;
+}
