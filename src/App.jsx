@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import SmStay from './companents/SmStay/SmStay';
 import { Route, Routes } from 'react-router-dom';
 import Welcome from './companents/Welcome/Welcome';
 import NotFound from './companents/NotFound/NotFound';
@@ -10,7 +11,6 @@ import SmChangAbout from './companents/SmChangAbout/SmChangAbout';
 import SmPlayground from './companents/SmPlayground/SmPlayground';
 import SmTheatrePages from './companents/SmTheatrePages/SmTheatrePages';
 import './App.scss';
-import SmStay from './companents/SmStay/SmStay';
 
 function App() {
   const { t } = useTranslation()
@@ -21,7 +21,7 @@ function App() {
   //     setWelcomeActive(true)
   //   }, 4000)
   // }, []);
-
+ 
   return (
     <>
       <div className="app">

@@ -38,8 +38,23 @@ export default function StayRoom() {
                     </div>
 
                     <div className="stayRoom__phone-box">
-                        <span><ImPhone /></span>
-                        <a href="tel:055-288-1058">055-288-1058</a>
+                        <a href="tel:055-288-1058">
+                            <span><ImPhone /></span>055-288-1058
+                        </a>
+                    </div>
+
+                    <div className="stayRoom__main">
+                        <ul className="stayRoom__main-list">
+                            <li className="stayRoom__main-item">
+                                <div className="stayRoom__main-item-media-slider">
+
+                                </div>    
+
+                                <div className="stayRoom__main-item-desc">
+
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

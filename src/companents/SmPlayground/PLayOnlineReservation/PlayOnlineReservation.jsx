@@ -1,22 +1,21 @@
-import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 import React, { useState, useEffect } from 'react';
-import "./PlayOnlineReservation.scss";
+import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 import PlayOnlineResModal from './PlayOnlineResModal/PlayOnlineResModal';
+import "./PlayOnlineReservation.scss";
 
 export default function PlayOnlineReservation() {
     const [daysArr, setDaysArr] = useState([]);
     const [monthName, setMonthName] = useState("");
     const [dayNameInx, setDayNameInx] = useState(0);
-    const [todayDay, setTodayDay] = useState(new Date().getDate());
     const [todayDayClick, setTodayDayClick] = useState(0);
     const [thisMonthName, setThisMonthName] = useState("");
     const [month, setMonth] = useState(new Date().getMonth());
     const [year, setYear] = useState(new Date().getFullYear());
+    const [todayDay, setTodayDay] = useState(new Date().getDate());
 
     const getDaysInMonth = (month, year) => {
         var monthNames = ['January', 'February', 'March', 'April', 'May',
             'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
         var daysNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
         var date = new Date(year, month, 1);
         var arr = [];
@@ -35,7 +34,6 @@ export default function PlayOnlineReservation() {
             });
             date.setDate(date.getDate() + 1);
         }
-
         return setDaysArr(arr);
     }
 
@@ -135,12 +133,11 @@ export default function PlayOnlineReservation() {
                                     className={`pOnline__slider-item
                                     ${item.month === thisMonthName ? item.day < todayDay
                                             ? "untilThisDay" : item.day === todayDay
-                                                ? "todayDayAct" : "" : ""
-                                        }`}
+                                                ? "todayDayAct" : "" : ""}`}
                                     onClick={() => setTodayDayClick(item.day)}
                                 >
                                     <div className="pOnline__slider-item-top">
-                                        <p className='pOnline__slider-item-top-day'>{item.day}</p>
+                                        <p className='pOnline__slider-item-top-day' >{item.day}</p>
                                         <p className='pOnline__slider-item-top-dayName'>{item.dayName}</p>
                                     </div>
 
@@ -170,11 +167,7 @@ export default function PlayOnlineReservation() {
                 </div>
             </div>
 
-            {/* {
-                daysArr !== [] ?
-                    <PlayOnlineResModal setTodayDayClick={setTodayDayClick} todayDayClick={todayDayClick} item={daysArr[todayDayClick]} />
-                    : ""
-            } */}
+            <PlayOnlineResModal todayDayClick={todayDayClick} setTodayDayClick={setTodayDayClick} daysArr={daysArr}/>
         </>
     )
 }

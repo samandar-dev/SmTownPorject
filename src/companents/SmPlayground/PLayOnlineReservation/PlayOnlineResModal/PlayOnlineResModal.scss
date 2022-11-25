@@ -8,8 +8,8 @@
     height: 100vh;
     position: fixed;
     @include flex-jc-center;
-    z-index: -100;
-    opacity: 0;
+    // z-index: -100;
+    // opacity: 0;
 
     &__inner {
         top: 50%;
@@ -29,7 +29,7 @@
         width: 100%;
         height: 100vh;
         z-index: 250;
-        position: relative;
+        position: absolute;
         background: rgba(0, 0, 0, 0.7);
     }
     &__title {
@@ -59,6 +59,7 @@
         width: 100%;
         outline: none;
         max-width: 546px;
+        color: $black !important;
     }
     &__select-btn {
         color: $white;
