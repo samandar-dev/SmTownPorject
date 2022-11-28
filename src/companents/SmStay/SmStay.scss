@@ -1,0 +1,17 @@
+@import "../../App.scss";
+
+.stay {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    &__title {
+        color: $black;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 35px;
+        text-align: center;
+        font-family: "Roboto";
+        letter-spacing: 0.5em;
+    }
+}

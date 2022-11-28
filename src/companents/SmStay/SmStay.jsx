@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import Footer from '../Footer/Footer';
-import MiniNavbar from '../Navbar/MiniNavbar/MiniNavbar';
 import Navbar from '../Navbar/Navbar';
-import "./SmStay.scss";
 import StayRoom from './StayRoom/StayRoom';
+import { useLocation } from 'react-router-dom';
+import MiniNavbar from '../Navbar/MiniNavbar/MiniNavbar';
+import "./SmStay.scss";
 
 export default function SmStay() {
     const location = useLocation()
