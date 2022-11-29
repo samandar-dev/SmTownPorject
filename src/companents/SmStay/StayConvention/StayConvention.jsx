@@ -1,11 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { ImPhone } from 'react-icons/im';
-import "./StayRoom.scss";
 import { Link } from 'react-router-dom';
+import { ImPhone } from 'react-icons/im';
 import StaySearch from '../StaySearch/StaySearch';
+import "./StayConvention.scss";
 
-export default function StayRoom(props) {
+export default function StayConvention(props) {
     const settings = {
         speed: 300,
         infinite: true,
@@ -14,11 +14,11 @@ export default function StayRoom(props) {
 
     return (
         <>
-            <div className="stayRoom">
-                <div className="stayRoom__inner">
+            <div className="sConvention">
+                <div className="sConvention__inner">
                     <StaySearch />
 
-                    <div className="stayRoom__main">
+                    <div className="sConvention__main">
                         <div className="stayRoom__main-phone-box">
                             <div className="stayRoom__phone">
                                 <a href="tel:055-288-1058">
@@ -26,7 +26,7 @@ export default function StayRoom(props) {
                                 </a>
                             </div>
                         </div>
-
+                        
                         <ul className="stayRoom__main-list">
                             {props.roomObj.map(item => (
                                 <li className="stayRoom__main-item" key={item.id}>

@@ -44,6 +44,8 @@ function App() {
             <Route path='/playground3' element={<SmPlayground />} />
             <Route path='/playground4' element={<SmPlayground />} />
             <Route path='/smstay1' element={<SmStay />} />
+            <Route path='/smstay2' element={<SmStay />} />
+            <Route path='/smstay1/:id' element={<SmStay />} />
             <Route path='/*' element={<NotFound />} />
           </Routes>
           : <Welcome title={t("welcome-title")} />}

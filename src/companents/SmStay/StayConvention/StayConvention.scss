@@ -1,0 +1,19 @@
+@import "../../../App.scss";
+
+.sConvention{
+    width: 100%;    
+    height: auto;
+    position: relative;
+    &__inner{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1440px;
+        position: relative;
+    }
+    &__main{
+        width: 100%;
+        position: relative;
+        padding-top: 24px;
+        padding-bottom: 124px;
+    }
+}

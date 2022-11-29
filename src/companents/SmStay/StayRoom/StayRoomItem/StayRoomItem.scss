@@ -1,0 +1,165 @@
+@import "../../../../App.scss";
+
+.sRoomItem {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    &__inner {
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1140px;
+        padding-top: 117px;
+        position: relative;
+    }
+    &__top {
+        width: 100%;
+        position: relative;
+        margin-bottom: 84px;
+        @include flex-jc-center;
+    }
+    &__title {
+        color: $black;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: 0.5em;
+        font-family: "Roboto";
+    }
+    &__btn {
+        top: -10px;
+        right: 0;
+        color: $black;
+        @include flex;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+        position: absolute;
+        padding: 12px 28px;
+        background: $white;
+        font-family: "Roboto";
+        transition: all 0.2s ease;
+        border: 1px solid $primary-color-14;
+        span {
+            margin-right: 15px;
+        }
+        &:hover {
+            color: $white;
+            background: $primary-color-1;
+            span {
+                color: $white;
+            }
+        }
+    }
+    &__main {
+        width: 100%;
+        position: relative;
+    }
+    &__main-img {
+        width: 100%;
+        height: 290px;
+        margin-bottom: 60px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__main-desc {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 610px;
+        position: relative;
+        margin-bottom: 90px;
+    }
+    &__main-desc-title {
+        color: $black;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 29px;
+        text-align: center;
+        font-family: "Roboto";
+        margin-bottom: 24px;
+    }
+    &__main-desc-text {
+        color: $black;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: center;
+        font-family: "Roboto";
+        margin-bottom: 60px;
+    }
+    &__main-desc-info {
+        width: 100%;
+        @include flex-jc-center;
+    }
+    &__main-desc-info-list {
+        margin-right: 40px;
+    }
+    &__main-desc-info-one-item,
+    &__main-desc-info-two-item {
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 21px;
+            margin-bottom: 7px;
+            font-family: "Roboto";
+            color: $primary-color-14;
+        }
+    }
+    &__main-desc-info-two-item {
+        p {
+            color: $black;
+        }
+    }
+    &__main-media {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    &__main-media-list {
+        margin-left: -9px;
+        margin-right: -9px;
+        @include flex-jc-between;
+    }
+    &__main-media-item {
+        width: 366px;
+        height: 290px;
+        margin: 0 9px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__main-info {
+        width: 100%;
+        margin-bottom: 145px;
+    }
+    &__main-info-item {
+        width: 100%;
+        display: flex;
+        margin-bottom: 44px;
+    }
+    &__main-info-name {
+        color: $black;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 23px;
+        font-family: "Roboto";
+        min-width: 126px;
+    }
+    &__main-info-item-two {
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 23px;
+            letter-spacing: -0.02em;
+            font-family: "Noto Sans KR";
+            color: #333333;
+        }
+    }
+}
